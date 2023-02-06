@@ -1,0 +1,172 @@
+<style>
+  .buy-now-pay-later-section {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 20px 15px;
+  }
+  .pay-later-item-icons {
+    display: inline-block;
+    margin-top: 5px;
+  }
+  .buy-now-pay-later-section h4 {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.67;
+    margin-top: 5px;
+  }
+  .buy-now-pay-later-section .text-part {
+    padding-left: 10px;
+  }
+  .pay-later-item-icons img {
+      max-width: 48px;
+      margin-left: 5px;
+  }
+  @media only screen and (max-width: 992px) {
+    .buy-now-pay-later-section {
+      flex-direction: column;
+      padding: 20px 10px;
+    }
+    .buy-now-pay-later-section .text-part {
+      margin: auto;
+      padding-left: 0;
+      text-align: center;
+    }
+    .buy-now-pay-later-section .image-part {
+      margin-left: -5px;
+      text-align: center;
+    }
+
+  }
+</style>
+
+{% unless settings.slides_mode %}
+<div class="holder  boxed  {{ section.settings.outer_margin }} {% if section.settings.show_under_header %}show_under_header{% endif %}">
+  <div class="container holder-bg-12" {% if section.settings.bg != blank %}style="background-color: {{ section.settings.bg }}"{% endif %}>
+    
+    <div class="buy-now-pay-later-section">
+      <div class="text-part"><h4>{{ section.settings.buy_now_text }}</h4></div>
+      <div class="image-part">
+        {% for block in section.blocks %}
+        <div class="pay-later-item-icons">
+                <img src="{{ block.settings.pay_icon_image | img_url: 'master' }}" class="logo-bar-img">
+        </div>
+      {% endfor %}   
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endunless %}
+{% schema %}
+{
+    "name": "Buy Now Pay Later",
+    "class": "index-section",
+    "settings": [
+  
+    {
+      	"type": "header",
+    	"content": "General"
+    },
+  	{
+  		"type": "text",
+  		"id": "buy_now_text",
+  		"label": "Buy Now Pay Later Text",
+      "default": "WE OFFER THE FOLLOWING PAYMENT METHODS"
+  	},
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+  
+    {
+    "type": "select",
+    "id": "outer_margin",
+    "label": "Outer top margin",
+    "options": [
+      {
+          "value": "mt-0",
+          "label": "None"
+      },
+      {
+          "value": "mt-1",
+          "label": "10px"
+      },
+      {
+          "value": "mt-2",
+          "label": "20px"
+      },
+      {
+          "value": "mt-3",
+          "label": "30px"
+      },
+      {
+          "value": "mt-4",
+          "label": "40px"
+      },
+      {
+          "value": "mt-5",
+          "label": "50px"
+      },
+      {
+          "value": "mt-6",
+          "label": "60px"
+      },
+      {
+          "value": "mt-65",
+          "label": "65px"
+      },
+      {
+          "value": "mt-7",
+          "label": "70px"
+      },
+      {
+          "value": "mt-8",
+          "label": "80px"
+      },
+      {
+          "value": "mt-9",
+          "label": "90px"
+      },
+      {
+          "value": "mt-10",
+          "label": "100px"
+      }
+    ],
+        "default": "mt-65"
+      },
+    {
+      "type": "checkbox",
+      "id": "show_under_header",
+      "label": "Show block under the header",
+      "default": false,
+      "info":"usefull when column is enabled"
+    },
+    {
+      "type":"color",
+      "id":"bg",
+      "label":"Section Background Color"
+    }
+ ],
+ "blocks": [
+          {
+           "type": "pay_later_images",
+            "name": "pay later item block",
+              "settings":[
+                  {
+                      "type": "image_picker",
+                      "id": "pay_icon_image",
+                      "label": "Choose Image"
+                  }
+              ]
+          }
+      ],
+ "presets": [
+      {
+        "name": "Buy Now Pay Later",
+        "category": "Text"
+      }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,508 @@
+<div class="holder fullboxed py-4 py-md-10 holder-bg-08 blur-up lazyautosizes lazyloaded" style="background:url({{ section.settings.bt_bg_image  | img_url: 'master'}});  background-size: contain;" data-sizes="auto">
+	<div class="container">
+		<div class="bnr bnr-discount bnr-discount--left">
+			<div class="row">
+				<div class="col-md">
+					<div class="christmas-bottom-center">
+						<div class="christmas-bottom-inner" style="background-color:{{ section.settings.textarea_background }} ">
+                          <div class="chri-b-text1"><h1 style="color: {{ section.settings.title_colour }};font-family: {{ section.settings.text-title-family }}; font-size:{{ section.settings.font_size }}px;">{{ section.settings.text-title-christmas }} </h1></div>
+							<div class="chri-b-text2">
+                              <p style="color: {{ section.settings.textarea_colour }};font-weight: {{ section.settings.textarea_fontweight }};">
+                          	{{ section.settings.text-content-christmas }}      
+                              </p>
+                          </div>
+						</div>
+					</div>
+				</div>
+
+	</div>
+</div>
+  </div></div>
+{% schema %}
+  {
+    "name": "Landing bottom Section",
+    "settings": [
+{
+           "type": "image_picker",
+           "id":"bt_bg_image",
+           "label":"Background Image "
+},
+{
+	"type": "text",
+	"id": "text-title-christmas",
+	"label":"Title"
+},
+{
+	"type": "text",
+	"id": "text-title-family",
+	"label":"Title font family"
+},
+{
+  "type": "color",
+  "id": "title_colour",
+  "label": "Title Colour",
+  "default": "#000"
+},
+{
+  "type": "range",
+  "id": "font_size",
+  "min": 10,
+  "max": 100,
+  "step": 2,
+  "unit": "px",
+  "label": "Title font size",
+  "default": 58
+},
+{
+	"type": "textarea",
+	"id": "text-content-christmas",
+	"label":"Content"
+},
+{
+  "type": "color",
+  "id": "textarea_background",
+  "label": "Textarea background",
+  "default": "#2980b9"
+},
+{
+  "type": "color",
+  "id": "textarea_colour",
+  "label": "Textarea Colour",
+  "default": "#fff"
+},
+{
+	"type": "text",
+	"id": "textarea_fontweight",
+	"label":"Textarea Fontweight"
+}
+],
+ "presets":
+    [
+        {
+            "name":"Landing bottom Section"
+        }
+    ]
+ }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+
+<style>
+
+/**************all landing page css*****************/
+/*************** Added by Liton ***************/
+  
+  @font-face {
+    font-family: BebasNeue;
+    src: url(https://cdn.shopify.com/s/files/1/1442/8846/files/BebasNeue-Regular.ttf?v=1655731267);
+  }
+
+  @font-face {
+    font-family: DancingScript;
+    src: url(https://cdn.shopify.com/s/files/1/1442/8846/files/DancingScript-VariableFont_wght.ttf?v=1655373901);
+  }
+  
+  
+  #cyber-monday .brand-sl-chris{
+    display: flex;
+    align-items: center;
+  }
+  #cyber-monday .btn, 
+  #mother-landing .btn{
+    background-color: transparent;
+  }
+  #cyber-monday .prd-view-btn a.btn.btn-outline{
+    font-weight: 600 !important;
+  }
+  #cyber-monday .brand-sl-chris li,
+  #mother-landing .brand-sl-chris li{
+    display: flex;
+    justify-content: center;
+  }
+  #cyber-monday .christmas-bottom-inner{
+    padding-bottom: 30px !important;
+    width: 58% !important;
+  }
+
+  #cyber-monday .christmas-bottom-center .chri-b-text2{
+    font-size: 16px;
+    width: 580px;
+  }
+  #cyber-monday .cyber-monday-text{
+    position: absolute;
+    transform: translate(-50%, -60px);
+    font-size: 20px;
+    font-weight: 300;    
+  }
+  #black-friday .black-friday-text {
+    font-size: 20px;
+    font-weight: 300;    
+  }
+  
+  #black-friday .pt-md-10, #black-friday .py-md-10 {
+    padding-top: 60px !important;
+  }
+  #black-friday .pb-md-10, #black-friday .py-md-10 {
+    padding-bottom: 60px !important;
+  }
+  .custom-landing h2.h1-style{
+    font-size: 20px !important;
+    font-weight: normal !important;
+    line-height: 1.2 !important;
+  }
+  #valentine-day h2.h1-style{
+    font-size: 24px !important;
+  }
+  
+  #cyber-monday .py-md-10{
+  	padding-top: 60px !important;
+  }
+
+  #mother-landing h2.text-white{
+    color: #000 !important;
+  }
+  #mother-landing .btn-outline{
+    border: 1px solid #000 !important;
+    color: #000 !important;
+  }
+  .custom-landing .vignette-of-image{
+    top: 50% !important;
+    height: 50% !important;
+    opacity: 0.5 !important;
+    box-shadow: none  !important;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000)  !important;
+  }
+
+  #black-friday .bnslider-text{
+    margin-top: 48px
+  }
+
+  #black-friday .bnslider-text p.text-black { 
+    color: #000;
+    text-transform: uppercase;
+    font-size: 160px;
+    line-height: 0.7;
+    font-family: BebasNeue;
+    padding: 0;
+    text-align: left;
+    margin-top: 51px;
+  }
+
+  #black-friday .bnslider-text p.text-white { 
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 160px;
+    line-height: .7;
+    font-family: BebasNeue;
+    padding: 0;
+    margin: 0;
+    letter-spacing: -4px;
+  }
+
+  #mother-landing .landing-slider-h1, 
+  #christmas-landing .bnslider-text.bnslider-text--lg {
+    font-family: DancingScript;
+    font-size: 104px;
+    font-weight: normal;
+    text-transform: capitalize;
+    margin: 0;
+  }
+  #cyber-monday .gift-details .seprator{
+    border: 1px solid #ff00ff !important;
+  }
+  #mother-landing .gift-details .seprator{
+    border: 1px solid #d9a9b6 !important;
+  }
+  #christmas-landing .gift-details .seprator{
+    border: 1px solid #e4d092 !important;
+  }
+  #christmas-landing .top-image-of-best-seller {
+      background-image: url(//cdn.shopify.com/s/files/1/1442/8846/t/54/assets/best-seller-banner_3x.png?v=27241770957740094671636536433);
+      height: 34px;
+      background-size: cover;
+      background-repeat: no-repeat;
+  }
+  .custom-landing img.blur-up.lazyautosizes.lazyloaded{
+    width :100%;
+  }
+  
+  #mother-landing .landing-slider-h1, #mother-landing .christmas-slider-p {
+  	color: #222 !important;
+    line-height: normal !important;
+    font-weight: 300;
+  }
+  
+  #mother-landing .christmas-bottom-center .chri-b-text1 h1,
+  #black-friday .christmas-bottom-center .chri-b-text1 h1{
+    line-height: 1 !important;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+  
+  #mother-landing .christmas-item-title a{
+  	line-height: normal !important;
+  }
+  #mother-landing .christmas-bottom-center .chri-b-text2,
+  #black-friday .christmas-bottom-center .chri-b-text2{
+  	font-family: Josefin Sans;    
+  }
+  
+  #valentine-day .bnslider-text.bnslider-text--lg{
+    font-family: Festive;
+    font-size: 120px;
+    font-weight: 100;
+    text-transform: capitalize;
+    margin-bottom: 0;
+    line-height: 1;
+  }
+  #valentine-day .bnslider-text.bnslider-text--md{
+  	margin-top:0 !important;
+  }
+  #valentine-day .bnslider-text .christmas-text{
+    line-height: 1.714em;
+    font-size: 20px;
+  }
+  
+  #valentine-day .christmas-bottom-center .chri-b-text2 {
+    text-transform: inherit;
+    font-weight: 600;
+  }
+  
+  #valentine-day .vignette-of-image {
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    top: 0 !important;
+    box-shadow: inset 20px -20px 70px #000000ad !important;
+    overflow: hidden !important;
+    z-index: 1 !important;
+  }
+  .custom-landing .brand-sl-chris li a{
+    width: 70% !important;
+  }
+  .custom-landing .brand-sl-chris li a img{
+    width: 100% !important;
+  }
+
+ 
+  @media only screen and (max-width: 767px){
+    
+    
+    .custom-landing .brand-sl-chris{
+      padding: 0 12px;
+    }
+    
+    #cyber-monday .bnslider-image-mobile,
+    #black-friday .bnslider-image-mobile,
+    #mother-landing .bnslider-image-mobile {
+      display: block;
+      z-index: 3;
+    }
+    #cyber-monday .text-center img{
+      display: none !important;
+    }
+    #cyber-monday .brand-sl-chris {
+      padding: 0 17px;
+    }
+    .custom-landing .brand-sl-chris li{
+      padding: 32px 0px;
+    }
+    
+    .custom-landing .bnslider.bnslider--lg {
+      height: 375px;
+      min-height: 375px;
+      max-height: calc(100vh - 85px);
+    }
+    #cyber-monday .cyber-monday-text {
+      transform: translate(-50%, 90px);
+      font-size: 14px;
+    }
+    .custom-landing .brand-sl-chris li a{
+      width: 100% !important;
+    }
+    #cyber-monday .brand-sl-chris li a img{
+      width: 84% !important;
+    }
+   
+    #mother-landing .brand-sl-chris li a img,
+    #christmas-landing .brand-sl-chris li a img,
+    #valentine-day .brand-sl-chris li a img,
+    #black-friday .brand-sl-chris li a img{
+      width: 87% !important;
+    }
+     #christmas-landing ul.brand-sl-chris li:last-child a img{
+    	width: 75% !important;
+    }
+    
+    #cyber-monday .christmas-bottom-inner{
+      width: 100% !important;
+      padding: 30px 20px 70px !important;
+    }
+    .custom-landing .christmas-bottom-inner .chri-b-text1 h1{
+      font-size: 40px !important;
+    }
+    .custom-landing .christmas-bottom-inner .chri-b-text2{
+      width: 100% !important;
+      font-size: 12px !important;
+      line-height:2.33 !important;
+      font-weight: 300 !important;
+    }
+    #christmas-landing .christmas-bottom-inner .chri-b-text2{
+      font-weight: 100 !important;
+    }
+    
+    #cyber-monday .container.cyber-text-wrapper,
+    #mother-landing .container.cyber-text-wrapper {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+    #black-friday .bnslider-text p.text-black,
+    #black-friday .bnslider-text p.text-white { 
+      display: none !important;
+    }
+    #black-friday .bnslider-text{
+        margin-top: 90px !important;
+    }
+    #black-friday .black-friday-text {
+      font-size: 14px !important;
+    }
+
+    #christmas-landing .bnslider-text.bnslider-text--lg {
+      font-family: DancingScript;
+      font-size: 72px;
+      font-weight: normal;
+      color: #222;
+      text-transform: capitalize;
+    }
+    #christmas-landing .vignette-of-bnslider-image-mobile{
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      opacity: 0.7;
+      background-color: #fff;
+      z-index: 2;
+    }
+    #christmas-landing .christmas-text{
+      color: #222;
+      font-size: 14px;
+      font-weight: 300;
+    }
+    #christmas-landing .container.cyber-text-wrapper{
+    	padding: 0;
+    }
+    #christmas-landing  .top-image-of-best-seller {
+    	background-size: contain;
+	}
+    
+    #christmas-landing .christmas-top-brand-bg{
+      background: url(https://cdn.shopify.com/s/files/1/1442/8846/files/snow-bg_2x_6cf8b92a-a95b-4f93-ae9d-e3f383b8207e.png?v=1655904871) !important;
+      background-size: cover !important;
+    }
+    #mother-landing .christmas-top-brand-bg{
+      background: url(https://cdn.shopify.com/s/files/1/1442/8846/files/snow-bg_3x_f8369923-b424-4df5-adeb-bafc15f6b87b.png?v=1655910203) !important;
+      background-size: cover !important;
+    }
+
+   
+    #mother-landing .alignforscreensizes {
+      width: 100%;
+    }
+    #mother-landing .christmas-slider-p{
+      text-align: center;
+      color: #222 !important;
+      font-size: 14px !important;
+      font-weight: 300 !important;
+    }
+    #mother-landing .member-details, .gift-details{
+      bottom: 7px !important;
+    }
+
+    #mother-landing .christmas-item-title {
+      margin-top: 10px !important;
+      padding: 0 9px !important;
+    }
+
+ 
+    #mother-landing .landing-slider-h1 {
+      font-family: DancingScript;
+      font-size: 62px;
+      text-align: center;
+    }
+    
+    #mother-landing .christmas-bottom-center .chri-b-text1 h1{
+      line-height: 0.6 !important;
+      margin-bottom: 36px;
+    }
+    
+    #christmas-landing .bnslider-text-content .bnslider-text-content-flex .bnslider-text.text-left{
+      align-self: center;
+      margin-top:6px;
+    }
+    
+    #valentine-day .bnslider-text.bnslider-text--lg {
+      font-size: 84px !important;
+      font-family: Festive !important;
+      font-weight: 100 !important;
+      letter-spacing: 1px;
+    }
+    #valentine-day .bnslider-text-content .bnslider-text-content-flex .bnslider-text.text-left{
+    	align-self: center;
+    }
+     #valentine-day .christmas-bottom-center .chri-b-text2 {
+      text-transform: inherit;
+      font-size: 14px !important;
+      font-weight: 600 !important;
+       line-height: 2 !important;
+    }
+     #valentine-day .bnslider-text .christmas-text{
+    	line-height: 1.2em;
+  	}
+
+  }
+
+  @media only screen and (min-width: 768px){
+    .bnslider.bnslider--lg {
+      height: 520px;
+      min-height: 520px !important;
+    }
+  }
+  
+   @media only screen and (min-width: 520px) and (max-width: 767px)  {
+     #black-friday .bnslider-text {
+       margin-top: 140px !important;
+     }
+  }
+
+
+  @media only screen and (min-width: 768px) and (max-width: 1024px)  {
+    #mother-landing .brand-sl-chris .col-md-3{
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+
+    
+/*************** Added by Liton ***************/
+</style>
+
+<script>
+jQuery(document).ready(function(){ 
+  jQuery('.christmas-bottom-center').parent().parent().parent().parent().addClass('cyber-text-wrapper');
+  
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    var valentineText = jQuery('#valentine-day .bnslider-text.bnslider-text--lg').text().split(' ');
+    jQuery('#valentine-day .bnslider-text.bnslider-text--lg').text(valentineText[0]);    
+  } 
+  
+});
+</script>

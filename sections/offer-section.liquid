@@ -1,0 +1,347 @@
+<style media="screen">
+    .shopify-offerSection .title-wrap h2 {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.2;
+    }
+    .shopify-offerSection_offers {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+    }
+    @media only screen and (max-width: 650px) {
+        .shopify-offerSection_offers {
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+       }
+    }
+    .shopify-offerSection_offers .offers {
+        width: calc((100% - 5vw) / 3);
+        height: calc(20vw + 80px);
+        text-align: center;
+        position: relative;
+        max-height: 355px;
+        min-width: 196px;
+    }
+    .shopify-offerSection_offers .offers-img {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -9;
+    }
+    .shopify-offerSection_offers .offers-img.mb {
+        display: none;
+    }
+    @media only screen and (max-width: 470px) {
+        .shopify-offerSection_offers .offers-img.mb {
+            display: block;
+       }
+    }
+    @media only screen and (max-width: 470px) {
+        .shopify-offerSection_offers .offers-img.dt {
+            display: none;
+       }
+    }
+    .shopify-offerSection_offers .offers-item:nth-child(1) {
+        background: -webkit-gradient(linear, left bottom, left top, from(rgba(167, 210, 200, 0.5)), color-stop(50%, rgba(229, 208, 146, 0.5)), to(rgba(231, 180, 190, 0.5)));
+        background: -o-linear-gradient(bottom, rgba(167, 210, 200, 0.5) 0%, rgba(229, 208, 146, 0.5) 50%, rgba(231, 180, 190, 0.5) 100%);
+        background: linear-gradient(0deg, rgba(167, 210, 200, 0.5) 0%, rgba(229, 208, 146, 0.5) 50%, rgba(231, 180, 190, 0.5) 100%);
+    }
+    .shopify-offerSection_offers .offers-item:nth-child(2) {
+        background: -webkit-gradient(linear, left bottom, left top, from(#76929d88), color-stop(#78929e88), color-stop(#949aa788), color-stop(#a9a0ae88), color-stop(#b5a3b388), color-stop(#b9a4b488), to(#e5c3be88));
+        background: -o-linear-gradient(bottom, #76929d88, #78929e88, #949aa788, #a9a0ae88, #b5a3b388, #b9a4b488, #e5c3be88);
+        background: linear-gradient(to top, #76929d88, #78929e88, #949aa788, #a9a0ae88, #b5a3b388, #b9a4b488, #e5c3be88);
+    }
+    .shopify-offerSection_offers .offers-item:nth-child(3) {
+        background: -webkit-gradient(linear, left bottom, left top, from(#76929d88), color-stop(#a7d2c888), to(#e5d09288));
+        background: -o-linear-gradient(bottom, #76929d88, #a7d2c888, #e5d09288);
+        background: linear-gradient(to top, #76929d88, #a7d2c888, #e5d09288);
+    }
+    .shopify-offerSection_offers .offers-category {
+        display: inline-block;
+        padding: 8px 14px;
+        font-size: 14px;
+        position: relative;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+    }
+    .shopify-offerSection_offers .offers-category-item-1 {
+        background: #d40000;
+        color: #fff;
+        font-weight: 700;
+    }
+    .shopify-offerSection_offers .offers-category-item-2 {
+        background: #e4d092;
+        color: #000;
+        font-weight: 700;
+    }
+    .shopify-offerSection_offers .offers-category-item-3 {
+        background: #75939e;
+        color: #fff;
+        font-weight: 700;
+    }
+    @media only screen and (max-width: 991px) {
+        .shopify-offerSection_offers .offers-category {
+            font-size: 12px;
+            padding: 10px 14px 8px;
+       }
+    }
+    @media only screen and (max-width: 768px) {
+        .shopify-offerSection_offers .offers-category {
+            font-size: 1rem;
+       }
+    }
+    @media only screen and (max-width: 470px) {
+        .shopify-offerSection_offers .offers-category {
+            font-size: 1.4rem;
+            padding: 8px 14px;
+       }
+    }
+    .shopify-offerSection_offers .offers-details {
+        height: 150px;
+        max-height: 150px;
+        background: white;
+        width: 75%;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+        bottom: 0;
+        position: absolute;
+        padding: 20px;
+    }
+    @media only screen and (max-width: 991px) {
+        .shopify-offerSection_offers .offers-details {
+            height: 48%;
+            padding: 16px;
+       }
+    }
+    @media only screen and (max-width: 820px) {
+        .shopify-offerSection_offers .offers-details {
+            padding: 8px;
+       }
+    }
+    @media only screen and (max-width: 470px) {
+        .shopify-offerSection_offers .offers-details {
+            padding: 12px;
+            height: 124px;
+       }
+    }
+    .shopify-offerSection_offers .offers-details .offers-discount {
+        font-size: 18px;
+        font-weight: 600;
+        height: 56px;
+    }
+    @media only screen and (max-width: 991px) {
+        .shopify-offerSection_offers .offers-details .offers-discount {
+            font-size: 1.5rem;
+            height: 4.2rem;
+       }
+    }
+    @media only screen and (max-width: 768px) {
+        .shopify-offerSection_offers .offers-details .offers-discount {
+            font-size: 1.2rem;
+       }
+    }
+    @media only screen and (max-width: 670px) {
+        .shopify-offerSection_offers .offers-details .offers-discount {
+            height: 3.8rem;
+       }
+    }
+    @media only screen and (max-width: 470px) {
+        .shopify-offerSection_offers .offers-details .offers-discount {
+            font-size: 1.6rem;
+            height: 4.4rem;
+       }
+    }
+    .shopify-offerSection_offers .offers-details .offers-code {
+        font-size: 16px;
+        font-weight: 300;
+    }
+    @media only screen and (max-width: 991px) {
+        .shopify-offerSection_offers .offers-details .offers-code {
+            font-size: 14px;
+       }
+    }
+    @media only screen and (max-width: 768px) {
+        .shopify-offerSection_offers .offers-details .offers-code {
+            font-size: 1.1rem;
+       }
+    }
+    @media only screen and (max-width: 470px) {
+        .shopify-offerSection_offers .offers-details .offers-code {
+            font-size: 1.4rem;
+       }
+    }
+    .shopify-offerSection_offers .offers-details .offers-shop-btn {
+        display: block;
+        position: absolute;
+        width: 70%;
+        height: 40px;
+        border: 1px solid black;
+        padding: 10px;
+        left: 50%;
+        bottom: 0;
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+    }
+  .shopify-offerSection_offers .offers-details .offers-shop-btn:hover{
+  	text-decoration:none;
+  
+  }
+    @media only screen and (max-width: 991px) {
+        .shopify-offerSection_offers .offers-details .offers-shop-btn {
+            font-size: 12px;
+            height: 32px;
+            padding: 8px;
+       }
+    }
+    @media only screen and (max-width: 768px) {
+        .shopify-offerSection_offers .offers-details .offers-shop-btn {
+            font-size: 1rem;
+       }
+    }
+    @media only screen and (max-width: 670px) {
+        .shopify-offerSection_offers .offers-details .offers-shop-btn {
+            height: 28px;
+            padding: 7px;
+       }
+    }
+    @media only screen and (max-width: 470px) {
+        .shopify-offerSection_offers .offers-details .offers-shop-btn {
+            height: 36px;
+            padding: 8px;
+            font-size: 1.2rem;
+       }
+    }
+    @media only screen and (max-width: 650px) {
+        .shopify-offerSection_offers .offers {
+            height: 196px;
+            margin: 12px;
+            margin-bottom: 20px;
+       }
+    }
+    @media only screen and (max-width: 470px) {
+        .shopify-offerSection_offers .offers {
+            height: 72vw;
+            margin: 0;
+            margin-bottom: 48px;
+            width: 100%;
+       }
+      .shopify-offerSection > .container {
+          margin: 35px 0px !important;
+      }
+      .shopify-offerSection .shopify-offerSection_offers .offers-item:last-child {
+      	margin-bottom:0px;
+      
+      }
+    }
+  
+  </style>
+  
+  
+  <div class="shopify-offerSection">
+    <div class="container mt-6 mb-6">
+      <div class="title-wrap text-center">
+        <h2 class="h1-style">{{ section.settings.offer_section_heading }}</h2>
+      </div>
+      <div class="shopify-offerSection_offers">
+        {% for block in section.blocks %}
+            <div class="offers offers-item">
+            <img class="offers-img dt" src="{{ block.settings.offer_image_desktop | img_url: 'master' }}">
+            <img class="offers-img mb" src="{{ block.settings.offer_image_desktop | img_url: 'master' }}">
+            <div class="offers-category offers-category-item-{{ forloop.index}}">{{ block.settings.offer_top_text }}</div>
+            <div class="offers-details">
+                <div class="offers-discount">
+                    {{ block.settings.offer_heading_text }}
+                </div>
+                <div class="offers-code">{{ block.settings.offer_sub_text }}</div>
+                <a class="offers-shop-btn" href="{{ block.settings.offer_button_url }}">
+                <div>{{ block.settings.offer_button_text }}</div>
+                </a>
+            </div>
+            </div>
+        {% endfor %}
+       
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+
+
+
+{% schema %}
+{
+   "name": "Offer Section",
+   "max_blocks":3,
+   "settings":[
+    {
+       "type": "text",
+       "id":"offer_section_heading",
+       "label":"Offer Section Heading"
+    }
+   ],
+   "blocks":[
+    {
+       "type": "offer_item",
+       "name": "Offer Item",
+       "settings":[
+        {
+           "type": "text",
+           "id":"offer_top_text",
+           "label":"Offer Top Text"
+        },
+        {
+           "type": "text",
+           "id":"offer_heading_text",
+           "label":"Offer Heading Text"
+        },
+        {
+           "type": "text",
+           "id":"offer_sub_text",
+           "label":"Offer Sub Heading Text"
+        },
+        {
+           "type": "text",
+           "id":"offer_button_text",
+           "label":"Offer Button Text"
+        },
+        {
+           "type": "url",
+           "id":"offer_button_url",
+           "label":"Offer Button url"
+        },
+        {
+           "type": "image_picker",
+           "id":"offer_image_desktop",
+           "label":"Offer Image Desktop"
+        },
+        {
+           "type": "image_picker",
+           "id":"offer_image_mobile",
+           "label":"Offer Image Mobile"
+        }
+       ]
+    }
+   ],
+  "presets": [
+      {
+          "category": "offer-section",
+          "name":"Offer Section"
+      }
+  ]
+}
+{% endschema %}

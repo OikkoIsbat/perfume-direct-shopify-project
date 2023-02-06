@@ -1,0 +1,241 @@
+{% include 'spurit_po2_section_snippet', product: null, products: collections[section.settings.collec].products %}
+<form action="{{ routes.cart_url }}" method="post">
+  <div class="my-cart" data-ajax-cart-section>
+    <button class="c_btn" data-ajax-cart-toggle-class-button="js-my-cart-open | remove">
+      <img src="https://cdn.shopify.com/s/files/1/1442/8846/files/close_1.png?v=1665299646" alt="">
+    </button>
+    {% if cart.item_count > 1 %}
+      <h2>Your Cart ({{ cart.item_count }} items)</h2>
+    {%endif%}
+    {% if cart.item_count <2 %}
+      <h2>Your Cart ({{ cart.item_count }} item)</h2>
+    {% endif %}
+
+    <div data-ajax-cart-static-element class="my-cart__app-container">
+      {% if settings.is_free_shipping_bar %}
+        {% include 'free-shipping-bar' %}
+      {% endif %}
+    </div>
+
+    <div class="overflow_scrol">
+      {% for item in cart.items %}
+        <div class="my-cart__item">
+          <div class="a-cart-left">
+            <img src="{{ item.image | img_url: '64x' }}" alt="{{ item.title | escape }}"/>
+          </div>
+          <div class="a-cart-right">
+            <a class="c_title" href="{{ item.url }}">{{ item.title }}</a>
+            <a class="c_remove" data-ajax-cart-request-button href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity=0">
+              REMOVE
+            </a>
+            <div class="c_varaint">
+              {% for option in item.product.options %}
+              {% if option != "Title" %} 
+              <span>{{ option }} </span>
+               <span> {{ item.variant.options[forloop.index0] }} </span><br/>
+              {% endif %}                          
+              {% endfor %}
+            </div>
+
+            <div class="c_quantity">
+              <div class="custom-quantity-container">
+                <span class="p_r_12">QTY</span>
+                <a data-ajax-cart-request-button href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity={{ item.quantity | minus: 1 }}">
+                  <span><img src="https://cdn.shopify.com/s/files/1/1442/8846/files/minus_1.png?v=1665295912" alt=""></span>
+                </a>
+                <input data-ajax-cart-quantity-input="{{ forloop.index }}" value="{{ item.quantity }}" name="updates[]" type="number"/>
+                <a data-ajax-cart-request-button href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity={{ item.quantity | plus: 1 }}">
+                  <span><img src="https://cdn.shopify.com/s/files/1/1442/8846/files/plus.png?v=1665295912" alt=""></span>
+                </a>
+              </div>
+              <div class="c_var_price">{{ item.final_price | money }}</div>
+            </div>
+
+            <div data-ajax-cart-messages="{{ item.key }}"></div>
+
+            <!-- <div>Total: <strong>{{ item.final_line_price | money }}</strong></div> -->
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <button type="submit" name="checkout" class="c_submit">
+      <h5>{{ cart.total_price | money }}
+        <p>
+          {% if cart.item_count > 1 %}
+            <span data-ajax-cart-bind-state="cart.item_count"></span>
+            ITEMS</p>
+          {% endif %}
+
+          {% if cart.item_count < 2 %}
+            <span data-ajax-cart-bind-state="cart.item_count"></span>
+            ITEM</p>
+          {% endif %}
+      </h5>
+      <h4>Go To Checkout</h4>
+    </button>
+  </div>
+</form>
+
+<div class="coll_area" hereiam>
+  {% if section.settings.c-title !=blank %}
+    <h3>{{ section.settings.c-title }}</h3>
+  {% endif %}
+  <div class="col_main cart_slid">
+    {% for product in collections[section.settings.collec].products %}
+      {% if product.available %}
+        <div class="item">
+          {% include 'product-card-col' %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+
+</div>
+<!-- {% for item in cart.items %}
+   <button class="custom-btn-checkout">
+  <h5>{{ cart.total_price | money }}
+     <p><span data-ajax-cart-bind-state="cart.item_count"></span>
+          ITEM</p>
+  </h5>
+  <h4>Go To Checkout</h4>
+</button>
+ {% endfor %}  -->
+
+
+{% schema %}
+  {
+    "name": "My Cart",
+    "settings": [
+      {
+        "type": "text",
+        "id": "c-title",
+        "label": "Heading"
+      }, {
+        "type": "collection",
+        "id": "collec",
+        "label": "Collection"
+      }
+    ]
+  }
+{% endschema %}
+
+<style>
+   
+
+  .custom-quantity-container{
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .continue-shopping-custom #shopify-section-my-cart-sidebar .is_free_progressbar{
+    padding-top: 16px; 
+  }
+  .qtybox > span {
+    min-width: 28px !important;
+    width: 26px !important;
+  }
+  .qtydiv div#select {
+    padding: 0 !important;
+  }
+  body .my-cart .my-cart__item .c_title {
+    color: #7b7777 !important;
+    width: 80% !important;
+  }
+  .a-cart-right {
+    padding-left: 15px;
+  }
+
+  @media only screen and (max-width: 514px) {
+        .c_quantity > div:first-child > input{
+          padding-right: 5px;
+        }
+/*     .c_submit{
+      display: none !important;
+    } */
+    .custom-btn-checkout{
+      display: flex !important;
+    }
+    .qtybox > input {
+      width: 28px !important;
+    }
+/*    #shopify-section-my-cart-sidebar .c_submit{
+     width: 100%;
+  } */
+  }
+
+   .custom-btn-checkout{
+          width: 100%;
+    display: flex;
+    justify-content: space-between;
+          border: 0;
+    background: #fff;
+      display: none;
+          position: fixed;
+    bottom: 0;
+      padding: 8px 20px;
+    box-shadow: 0 -1px 5px #0000001a;
+     z-index: 999999999;
+    }
+
+    .custom-btn-checkout > h4{
+    width: 208px;
+    height: 48px;
+    line-height: 48px;
+    text-transform: uppercase;
+    font-size: 14px;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    margin: 0;
+  }
+</style>
+
+<script>
+(function pollForWithBenefits() {
+    if (document.querySelector('#shopify-section-my-cart-sidebar .my-cart .my-cart__app-container .is_free_progressbar > a')) {
+                try {
+               // document.querySelector(".custom-btn-checkout").addEventListener("click", function(){
+               //   document.querySelector(".c_submit").click();
+               //  });
+              
+              if(!(window.location.href.indexOf("cart") > -1)){
+          console.log("loc checked");
+          document.querySelector('body').classList.add("continue-shopping-custom");
+        }
+          else{
+            if(document.querySelector('body').classList.contains("continue-shopping-custom")){
+              document.querySelector('body').classList.remove("continue-shopping-custom");
+            }
+          }
+		} catch (error) {
+		  console.log("Initialization error:", error);
+		}
+    }
+})();
+
+//freeshipping 
+
+
+
+// window.addEventListener("load", function() {
+//   function pollForBar() {  
+//     if (document.querySelector('.my-cart .is_free_progressbar .free_shipping_card_wrapper_cl92lyu1p4000261qy2wgujlbv8.cart_page')) {
+//       console.log("poll8888");
+//       var freeShippinArr = $('.my-cart .free_shipping_card_title_cl92lyu1p4000261qy2wgujlbv8').text().split(' ')
+//       var freeShippingLbl = freeShippinArr[0] + ' ' + '<strong>' + freeShippinArr[1] + '</strong>' + ' ' + freeShippinArr[2] + ' ' + freeShippinArr[3] + ' ' +  '<strong>' + freeShippinArr[4] + ' ' + freeShippinArr[5] +  '</strong>';
+//       console.log(freeShippingLbl)
+//       $('.my-cart .free_shipping_card_title_cl92lyu1p4000261qy2wgujlbv8').before(freeShippingLbl)
+//     } else {
+//       setTimeout(pollForBar, 25);
+//     }
+//   };
+//   pollForBar();
+// }, false);
+
+
+  
+  
+</script>
