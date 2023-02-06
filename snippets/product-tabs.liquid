@@ -1,0 +1,130 @@
+<div class="holderrr mt-4 mb-4 pb-4 global_width product-tabs-wrap">
+  <div class="cccontainer nolinemobile">
+
+
+    <div class="pdp_accordion">
+      {% for block in section.blocks %}
+        {% if block.settings.enable %}
+
+          {% case block.type  %}
+            {% when 'tab_description' %}
+              <button class="accordion">{{ block.settings.title }}</button>
+              <div class="panel customHide">
+                {{ product.description }}
+              </div>
+
+            {% when 'tab_page' %}
+              <button class="accordion">{{ pages[block.settings.page].title }}</button>
+              <div class="panel customHide">
+                {{ pages[block.settings.page].content }}
+              </div>
+
+            {% when 'tab_reviews' %}
+              <button class="accordion">REVIEWS</button>
+              <div class="panel customHide">
+                {% include 'reviews-shortcode' %}
+              </div>
+          {% endcase %}
+        {% endif %}
+      {% endfor %}
+    </div>
+
+
+
+  </div>
+</div>
+
+<script>
+
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.classList.add("customHide");
+        panel.style.maxHeight = null;
+      } else {
+        panel.classList.remove("customHide");
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      
+      }
+    });
+  }
+</script>
+
+<style>
+  .custom-margin-add {
+    margin-top: 80px !important;
+  }
+  .customHide {
+    display: none !important;
+  }
+  .pdp_accordion > button {
+    font-weight: 600;
+  }
+  .prd-block .size-list li span.value {
+    font-weight: 600;
+  }
+  .td-saving-amt {
+    font-weight: 800;
+  }
+  #shopify-section-product-section .yotpo.yotpo-main-widget.yotpo-medium {
+    position: relative;
+  }
+  #shopify-section-product-section .yotpo.yotpo-main-widget.yotpo-medium > div.main-widget {
+    position: relative;
+  }
+
+  .yotpo-reviews > div.yotpo-review > div.yotpo-main,
+  div.yotpo-footer {
+    padding-left: 48px;
+  }
+</style>
+
+<script>
+  (function pollForElemStar() {
+    if (document.querySelector('.yotpo-messages')) {
+      var targetMoooo = document.querySelector('.yotpo-messages');
+      console.log("test", targetMoooo);
+      var observerMoooo = new MutationObserver(function(mutationsM) {
+
+        mutationsM.forEach(function() {
+          console.log('yse updated');
+          if (!document.querySelector('.yotpo-messages > div').classList.contains('yotpo-hidden')) {
+            document.querySelector('.main-widget').classList.add('custom-margin-add');
+          } else {
+            document.querySelector('.main-widget').classList.remove('custom-margin-add');
+          }
+        });
+
+      });
+      var configMoooo = {
+        childList: true,
+        subtree: true,
+        characterData: true,
+        attributes: true
+      };
+      observerMoooo.observe(targetMoooo, configMoooo);
+    } else {
+      setTimeout(pollForElemStar, 25);
+    }
+
+
+  })();
+
+
+  function pollForOption() {
+
+    if (document.querySelectorAll('.pdp_accordion button.accordion')[1].innerText == 'SHIPPING & DELIVERY') {
+      console.log("consooole loooog");
+      document.querySelectorAll('.pdp_accordion button.accordion')[1].innerText = 'DELIVERY OPTIONS';
+    } else {
+      console.log("no consooole loooog");
+      setTimeout(pollForOption, 25);
+    }
+  };
+  pollForOption();
+</script>

@@ -1,0 +1,467 @@
+<!-- CSS -->
+<style>
+.loyalty-section-header {
+    text-align: center;
+    font-size: 36px;
+    font-family: JosefinSans-Regular;
+}
+.loyalty-faq .accordion {
+    background-color: transparent;
+    cursor: pointer;
+    width: 100%;
+    outline: none;
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    border-top: 1px solid #cacaca;
+    margin: 0;
+    padding: 20px;
+    align-items: center;
+  text-align: left;
+  }
+  
+  .loyalty-faq .accordion:hover {
+   cursor: pointer; 
+  }
+  
+  .loyalty-faq .active {
+    color: #000; 
+  }
+    
+  .loyalty-faq .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+     transition: 0.4s;
+        padding: 20px;
+  }
+    
+  .loyalty-faq {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.loyalty-faq .accordion:hover {
+    cursor: pointer;
+}
+
+.loyalty-faq .loyalty-faq-question-container {
+    flex-basis: 100%;
+}
+  
+.loyalty-faq .accordion svg {
+  position: initial;
+  transform: none;
+      width: 15px;
+}
+  
+.loyalty-faq .accordion.active svg {
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transition: 0.2s;
+}
+
+.loyalty-faq-section-container {
+    margin: 80px auto;
+}
+
+  .loyaly-faq-subtitle {
+    margin: 30px 0 10px;
+}
+
+ .loyalty-faq .accordion {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+  .loyalty-faq .panel p {
+    font-size: 16px;
+    font-weight: 300;
+}
+  .loyalty-faq .panel ul {
+
+  margin-top: 10px;
+  }
+.loyalty-faq .panel li {
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 5px;
+}
+  
+/*MOBILE*/
+@media only screen and (max-width: 768px) {
+  .loyalty-faq .loyalty-faq-question-container {
+    flex-basis: 100%;
+}
+
+.loyalty-faq .accordion .icon {
+  width: 32px !important;
+  min-width: 32px;
+  max-width: 32px;
+}
+  
+  .loyalty-faq-section-container {
+    margin-top: 40px;
+}
+}
+</style>
+
+<!-- HTML -->
+<div class="loyalty-faq-section-container">
+
+  <h2 class="loyalty-section-header">FAQs</h2>
+  <div class="loyalty-faq">
+    
+  <h3 class="loyaly-faq-subtitle">Signing Up</h3>
+<!-- QUESTION AND ANSWER-->
+  <div class="loyalty-faq-question-container">
+    <button class="accordion"> 1) How do I sign up for the rewards program?
+      <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12"/></g></svg>
+    </button>
+    <div class="panel">
+      <p>
+      Simply create an account by going to: <a href="www.perfumedirect.com/account/login">www.perfumedirect.com/account/login</a> and clicking ‘Create an account’ - enter your name, email, and password. It’s free to join and you will automatically be signed up to receive emails with insider access to sales, promos, and all of our newest drops. 
+     </p>
+       <p>
+If you currently have an account or email subscription with us - you’ve already been enrolled in our rewards program so you can kick back, sign in, and start earning Points!
+      </p>
+    </div>
+  </div>
+    
+ 
+  <div class="loyalty-faq-question-container">
+    <button class="accordion">2) What are the advantages of becoming a rewards member?
+      <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12"/></g></svg>
+    </button>
+    <div class="panel">
+      <p> 
+Our rewards program is a tiered program that allows members to earn more perks the more they engage with us. Members receive rewards points for each purchase, that can then be redeemed towards the cost of future purchases. 
+      </p>
+      <p>
+You also earn points for, sharing with friends, following us on social media, leaving product reviews, and are even gifted with bonus points just for having a birthday! 
+      </p>
+      <p>
+In addition to earning points, members have the chance to earn Free shipping and get exclusive access to coupons, launches, promotions, giveaways, and more.
+      </p>
+      <p>
+ You can view the full list of perks on our rewards page.
+      </p>
+    </div>
+  </div>
+
+
+    <h3 class="loyaly-faq-subtitle">Account</h3>      
+
+<!-- QUESTION AND ANSWER-->
+  <div class="loyalty-faq-question-container">
+    <button class="accordion">1) I already have an account. Do I need to create a new one to earn rewards?
+
+      <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12"/></g></svg>
+    </button>
+    <div class="panel">
+      <p> We took care of that for you! All customers with an active account were automatically enrolled in our rewards program.
+ </p>
+    </div>
+  </div>
+
+        <!-- QUESTION AND ANSWER-->
+  <div class="loyalty-faq-question-container">
+    <button class="accordion">2) Where can I find all of my rewards account info?
+      <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12"/></g></svg>
+    </button>
+    <div class="panel">
+      <p> The rewards page is your roadmap to all your points and perks. You can access all your info by visiting our <a href="www.perfumedirect.com/pages/loyalty" target="_blank">rewards page</a>  
+ </p>
+    </div>
+  </div>
+
+        <!-- QUESTION AND ANSWER-->
+  <div class="loyalty-faq-question-container">
+    <button class="accordion">3) Will I receive points for purchases I made prior to creating my rewards account?
+      <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12"/></g></svg>
+    </button>
+    <div class="panel">
+      <p> You will only receive points for purchases made after creating your rewards account. Make sure to create an account before placing an order so you can receive points!
+</p>
+    </div>
+  </div>
+
+        <!-- QUESTION AND ANSWER-->
+  <div class="loyalty-faq-question-container">
+    <button class="accordion">4) Does it cost anything to begin earning points?
+      <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12"/></g></svg>
+    </button>
+    <div class="panel">
+      <p> Absolutely not! Sign up is 100% free, and it will never cost you anything to earn points. 
+ </p>
+    </div>
+  </div>
+
+
+
+    <h3 class="loyaly-faq-subtitle">Earning & Redeeming</h3>      
+<!-- QUESTION AND ANSWER-->
+  <div class="loyalty-faq-question-container">
+    <button class="accordion">1) How do I redeem my points?
+      <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12"/></g></svg>
+    </button>
+    <div class="panel">
+      <p> 
+        Exchanging your points for great rewards couldn't be easier! Simply visit & login at www.perfumedirect.com/pages/loyalty to view all of our great reward options and click the 'Redeem' button to redeem your chosen reward. 
+      </p>   
+    </div>
+  </div>
+
+        <!-- QUESTION AND ANSWER-->
+  <div class="loyalty-faq-question-container">
+    <button class="accordion">2) How do points convert to £?
+      <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12"/></g></svg>
+    </button>
+    <div class="panel">
+      <p> 100 points = £5</p>
+      <p>200 points = £10</p>
+      <p>300 points = £15</p>
+      <p>400 points = £20</p>
+      <p>
+        Higher tiers in the VIP tier program earn more points at a quicker rate, but 100 points always = £5. <br>
+ For Example, as a Bronze tier member, you will earn 1 point for every £ you spend. So, if you spend £150, you'll earn 150 points. 
+      </p>
+      <p>
+        When you move up to become a Silver tier member you will be earning points 1.25x as fast, ex. spend £150, you’ll earn 187.5 points.
+      </p>
+      <p>
+        Gold tier will earn 1.5x as fast, ex. spend £150, you’ll earn 225 points. 
+      </p>
+    </div>
+  </div>
+
+
+        <!-- QUESTION AND ANSWER-->
+  <div class="loyalty-faq-question-container">
+    <button class="accordion">3) What are the easy ways to earn points?
+      <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12"/></g></svg>
+    </button>
+    <div class="panel">
+      <p>
+      For starters- each member gets a reward of 40 points just for joining our rewards program. Aside from earning points through purchases, you can add your birthday to your account to earn points, leave us a review, or like/follow us on social media channels.   
+      </p>
+      <p>
+        Access all the ways to earn on the <a href="https://www.perfumedirect.com/pages/loyalty" target="_blank">rewards page</a>.
+      </p>
+    </div>
+  </div>
+
+  <h3 class="loyaly-faq-subtitle">Program Limitations</h3>   
+<!-- QUESTION AND ANSWER-->
+  <div class="loyalty-faq-question-container">
+    <button class="accordion">1) Is there a limit to how many points I can earn?
+      <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12"/></g></svg>
+    </button>
+    <div class="panel">
+      <p> 
+        Nope! That’s the best part about being a rewards member! You will always have an opportunity to earn more points by shopping with us, engaging with our brand and community online!
+      </p>
+    </div>
+  </div>
+
+        
+  <h3 class="loyaly-faq-subtitle">Returns</h3>   
+        <!-- QUESTION AND ANSWER-->
+  <div class="loyalty-faq-question-container">
+    <button class="accordion">1) I've earned points/VIP tier with my last purchase, but now I want to return it. What will happen to my reward?
+      <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12"/></g></svg>
+    </button>
+    <div class="panel">
+      <p> 
+      If you use your rewards towards a purchase and later decide to return that item, your rewards will be credited back to your rewards account. For example, if you use £5 coupon towards a £100 purchase that you decide to return, the £95 balance will be refunded on your credit card and the £5 reward credit will be deposited back into your rewards account.
+  
+      </p>
+    </div>
+  </div>
+
+          <h3 class="loyaly-faq-subtitle">Reward Expiration</h3>  
+
+<!-- QUESTION AND ANSWER-->
+  <div class="loyalty-faq-question-container">
+    <button class="accordion">1) Do points ever expire?
+      <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12"/></g></svg>
+    </button>
+    <div class="panel">
+      <p> 
+      Your points will expire after one year of inactivity. Inactivity includes not interacting with our program i.e., redeeming points, placing an order, etc  
+      </p>
+    </div>
+  </div>
+
+   <h3 class="loyaly-faq-subtitle">VIP Program Questions</h3>  
+
+<!-- QUESTION AND ANSWER-->
+  <div class="loyalty-faq-question-container">
+    <button class="accordion">1) How is my VIP tier determined? 
+      <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12"/></g></svg>
+    </button>
+    <div class="panel">
+      <p> Your VIP tier is determined by the amount you spend in a rolling 12-month period from the time you moved into that tier. </p>
+      <p>
+        Example: <br>
+To reach the Silver tier you need to spend between £180 - £349 in a 12-month period. 
+
+      </p>
+    </div>
+  </div>
+
+        <!-- QUESTION AND ANSWER-->
+  <div class="loyalty-faq-question-container">
+    <button class="accordion">2) How do I know which Rewards tier I am currently a member of?
+      <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12"/></g></svg>
+    </button>
+    <div class="panel">
+      <p> 
+      When you are signed into your rewards account, your home page will list all of the rewards tiers. Your current tier and perks will be highlighted with a box around it.
+  
+      </p>
+    </div>
+  </div>
+
+   <h3 class="loyaly-faq-subtitle">Tier Expiration</h3>  
+
+<!-- QUESTION AND ANSWER-->
+  <div class="loyalty-faq-question-container">
+    <button class="accordion">1) Does the tier that I’m in expire?
+      <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12"/></g></svg>
+    </button>
+    <div class="panel">
+      <p> 
+      Once you are in the Silver & Gold Tier, you will be in that tier for one year from the date you earned it. Make sure to keep interacting with our program to maintain your status (or even move up a tier)!  
+      </p>
+    </div>
+  </div>
+
+        
+   <h3 class="loyaly-faq-subtitle">Troubleshooting</h3>  
+<!-- QUESTION AND ANSWER-->
+  <div class="loyalty-faq-question-container">
+    <button class="accordion">1) Why didn’t I earn points on my purchase?
+      <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12"/></g></svg>
+    </button>
+    <div class="panel">
+      <p> 
+      Double-check you were signed into your rewards account and didn’t accidentally check out as a guest. You must be logged in when making purchases to earn points. 
+        If you have done this in error, contact us at <a href="mailto:support@perfumedirect.com">support@perfumedirect.com</a> to help apply your points to your account. You also won’t receive points if you return your purchase or your purchase is cancelled for any reason. 
+        Please note that any points you earn on a purchase you later return will be deducted from your point balance.  
+      </p>
+    </div>
+  </div>
+
+        <!-- QUESTION AND ANSWER-->
+  <div class="loyalty-faq-question-container">
+    <button class="accordion">2) I should have earned points for a purchase/incentive but I didn’t see my account balance change. Did I get credit?
+      <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12"/></g></svg>
+    </button>
+    <div class="panel">
+      <p> 
+      Yes!  You work hard to earn points and we want you to feel confident that all of your points are right where they should be . . . in your account!  
+        The first thing to note is that there may be a delay in our systems communicating and points could take anywhere from minutes to several hours to appear in your account.  
+        However, if you feel like you have earned points but they are not showing up in your account you can also troubleshoot it with these tricks:  
+      </p>
+      <ul>
+        <li>Try to refresh your browser.</li>
+        <li>Try to log out and then back into your account.</li>
+        <li>
+          Check your ‘Rewards history’ in your Rewards account to see if the points were added without you realizing it.  
+          Your ‘Rewards history’ will show you the number of points earned, how and when they were earned, as well as any redemptions of points made on your account.
+        </li>
+      </ul>
+      <p>
+        If you still feel like your points balance is not accurate you can contact <a href="mailto:support@perfumedirect.com">support@perfumedirect.com</a> and they will look into the issue for you.
+
+      </p>
+    </div>
+  </div>
+
+        <!-- QUESTION AND ANSWER-->
+  <div class="loyalty-faq-question-container">
+    <button class="accordion">3) I received an error message when referring friends through the email referral box. What went wrong?
+      <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12"/></g></svg>
+    </button>
+        <div class="panel">
+      <p> We are sorry to hear that.  There are a couple of scenarios that could have triggered the error message.  
+ </p>
+      <p>
+        The first possible scenario is that there was a mistype in one of the email addresses that you entered, or you forgot to put commas between multiple emails to separate them. 
+
+      </p>
+      <p>
+        To eliminate confusion over what occurred, we recommend that you go back and enter each email address one at a time, clicking ‘send’ after each one rather than uploading them all at once.  
+      </p>
+      <p>
+        If you are still having problems using the email referrals, we recommend using your unique referral link or sharing the referral through Facebook, Twitter, or Messenger to receive credit. 
+        Please contact <a href="mailto:support@perfumedirect.com">support@perfumedirect.com</a> if you need further assistance.
+      </p>
+    </div>
+  </div>
+
+        <!-- QUESTION AND ANSWER-->
+  <div class="loyalty-faq-question-container">
+    <button class="accordion">4) I’ve referred several friends but haven’t received any points for it. Is there something else I need to do?
+      <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12"/></g></svg>
+    </button>
+    <div class="panel">
+    <p>
+      Thank you so much for sharing us with your friends!  We really appreciate it.  
+    </p>
+      <p>
+        Referred friends must be a first-time customer in order for both of you to receive the referral rewards.  In addition, the referral must be initiated through our rewards referral box on your personal rewards page or through the use of your unique referral link also found there. 
+      </p>
+      <p>
+        Points will be added to your account as soon as your friend completes their first purchase on our website.  
+      </p>
+      <p>
+        When this happens you will receive an email letting you know that one of your referrals made a purchase using your code and that a reward was added to your account.  
+        You can also check your ‘Rewards History’ to see a list of any points that you have received for referrals.
+      </p>
+    </div>
+  </div>
+
+  <h3 class="loyaly-faq-subtitle">Checkout</h3>  
+<!-- QUESTION AND ANSWER-->
+  <div class="loyalty-faq-question-container">
+    <button class="accordion">1) How do I redeem my rewards at checkout?
+      <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000"><g><path d="M0,0h24v24H0V0z" fill="none"/></g><g><polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12"/></g></svg>
+    </button>
+    <div class="panel">
+      <p> To redeem your points in checkout, use the slider directly above your cart total to choose the amount you would like to apply, then click the "APPLY" button. </p>
+    </div>
+  </div>
+
+
+        
+        
+        
+  
+  </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>

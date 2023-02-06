@@ -1,0 +1,216 @@
+{% assign on_sale = false %}
+{% if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price %}
+  {% assign on_sale = true %}
+{% endif %}
+
+{% assign sold_out = true %}
+{% if product.available %}
+  {% assign sold_out = false %}
+{% endif %}
+
+{% assign show = true %}
+{% if sold_out %}
+  {% unless settings.show_out_of_stock %}
+    {% assign show = false %}
+  {% endunless %}
+{% endif %}
+
+{%- assign grid_image_width = '410x' -%}
+{%- assign grid_image_scale = '2' -%}
+
+{% assign countdown = product.metafields.c_f.countdown %}
+
+{% if show %}
+
+
+  <div class="cart_col_p prd prd-{{ settings.product_card_hover }} prd-has-loader- {% if sold_out %}prd-outstock{% endif %} {% if countdown != blank %}prd-has-countdown{% endif %} product-item {% if sold_out %}product-item--not-available{% endif %} product-id-{{ product.selected_or_first_available_variant.id }} tag-all-{{ collection.handle }} {% if section.settings.tabs and section.settings.tags != blank %}{% for tag in product.tags %} tag-{{ tag | handle }} {% endfor %}{% endif %}">
+
+    <div class="prd-inside">
+      <div class="p_flex" onclick="location.href='{{ product.url | within: collection }}';" style="cursor:pointer">
+        <div class="prd-img-area">
+          {% if sold_out %}
+            <div class="label-outstock">{{ 'general.theme.out_of_stock' | t }}</div>
+          {% endif %}
+
+          {%- assign aspect_ratio = 1 | divided_by: product.featured_image.aspect_ratio -%}
+          <a title="{{ product.title }}" href="{{ product.url | within: collection }}" class="prd-img image-container" style="padding-bottom: {{ aspect_ratio | times: 100 }}%">
+            {% assign _img = product.featured_image %}
+            {% assign _img_size = grid_image_width %}
+            {% if _img %}
+              <img class="lazyload blur-up js-prd-img" data-src="{{ _img | img_url: _img_size }}" data-srcset="{{ _img | img_url: _img_size }} 1x, {{ _img | img_url: _img_size, scale: 2 }} 2x" data-aspectratio="{{ _img.aspect_ratio }}" data-sizes="auto" alt="{{ _img.alt | escape }}">
+              {%- if  product.images[1] and settings.product_hover_image -%}
+                {% assign _img2 = product.images[1] %}
+                <img class="lazyload blur-up js-prd-img" data-src="{{ _img2 | img_url: _img_size }}" data-srcset="{{ _img2 | img_url: _img_size }} 1x, {{ _img2 | img_url: _img_size, scale: 2 }} 2x" data-aspectratio="{{ _img2.aspect_ratio }}" data-sizes="auto" alt="{{ _img2.alt | escape }}">
+              {%- endif -%}
+            {%- endif -%}
+            <div class="gdw-loader"></div>
+          </a>
+          {% if on_sale and settings.show_label_sale %}
+            <div class="label-sale">
+              -{{ product.selected_or_first_available_variant.compare_at_price | minus: product.selected_or_first_available_variant.price | times: 100.0 | divided_by:product.selected_or_first_available_variant.compare_at_price | times: 100 | divided_by: 100 | floor }}%</div>
+          {% endif %}
+          {% assign new = 0 %}
+          {% for tag in product.tags %}
+            {% if tag == 'new' or tag == 'NEW' %}
+              {% assign new = 1 %}{% endif %}
+          {% endfor %}
+          {% if new == 1 and settings.show_label_new %}
+            <div class="label-new">{{ 'general.theme.new' | t }}</div>
+          {% endif %}
+          {% include 'wishlist-product-preview' %}
+          {% if settings.show_quick_view %}
+            <a href="#" title="{{ 'general.theme.quick_view' | t }}" class="label-wishlist icon-eye js-qview-link" data-fancybox data-type="ajax" data-src="{{ product.url }}{% if template == 'search' %}&{% else %}?{% endif %}view=quick-view&output=embed"></a>
+          {% endif %}
+          {% include 'product-colors' %}
+          {% if countdown != blank %}
+            <div class="countdown-box">
+              <div class="countdown js-countdown" data-countdown="{{ countdown }}"></div>
+            </div>
+          {% endif %}
+
+        </div>
+        <div class="prd-info">
+          {% if settings.show_vendor %}
+            <div class="prd-tag prd-hidemobile">{{ product.vendor  }}</div>
+          {% endif %}
+          <h2 class="prd-title">
+            <a title="{{ product.title  }}" href="{{ product.url | within: collection }}">{{ product.title | truncate: settings.product_preview_title_count }}</a>
+          </h2>
+
+          <div class="prd-price-rating-wrap proper-size-price">
+            {% include 'product-card-price' %}
+            {% comment %}
+              {%- unless settings.stars_off -%}<div class="prd-rating {% if settings.stars_mobile_off %}prd-hidemobile{% endif %}"><span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span></div>{%- endunless -%}
+            {% endcomment %}
+            {%- unless settings.stars_off -%}
+              <div class="yotpo bottomLine" data-product-id="{{ product.id }}">
+                {%- assign yotpo_offload_content = shop.metafields.yotpo.yotpo_offload_content %}
+                {%- assign time_now = 'now' | date: '%s' %}
+                {%- assign yotpo_live_time = shop.metafields.yotpo.yotpo_live | date: '%s' %}
+                {%- assign diff_seconds_from_live = time_now | minus: yotpo_live_time %}
+                {%- assign yotpo_bottomline_last_updated = product.metafields.yotpo.bottomline_update_time | date: '%s' %}
+                {%- assign diff_seconds_from_last_bottomline_update = time_now | minus: yotpo_bottomline_last_updated %}
+                {%- if yotpo_live_time and diff_seconds_from_live < 86400 and yotpo_bottomline_last_updated and diff_seconds_from_last_bottomline_update < 86400 -%}
+                  {%- assign yotpo_bottomline_obsolete = false %}
+                {%- else %}
+                  {%- assign yotpo_bottomline_obsolete = true %}
+                {%- endif %}
+                {%- if yotpo_offload_content == 'yes' and yotpo_bottomline_obsolete != true -%}
+                  {{ product.metafields.yotpo.bottomline }}
+                {%- endif %}
+              </div>
+              <!-- <div class="prd-rating">
+              {% comment %} <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span> {% endcomment %}
+
+              </div>-->
+            {%- endunless -%}
+          </div>
+
+          {% comment %}
+            {% include 'prd-action', no_quickview: true %}
+          {% endcomment %}
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+{% endif %}
+{% unless product.variants.size > 1 %}
+
+  {% assign sizehide = 'custom-hide' %}
+{% endunless %}
+<form method="post" action="/cart/add">
+  <div class="qtydiv">
+    <div id="select" class="{{ sizehide }}">
+      {% if product.variants.size > 1 %}
+        <select name="id" id="data{{forloop.index}}">
+          {% for variant in product.variants %}
+            <option {% if variant.available %}{% else %}disabled{% endif %} data-size="{{ variant.option1 }}" data-color="{{ variant.option2 }}" value="{{ variant.id }}" {% if product.selected_or_first_available_variant.id == variant.id %} selected {% endif %}><br>{{ variant.title }}-{{ variant.price | money}}</option>
+          {% endfor %}
+
+        </select>
+
+      {% else %}
+        <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}"/>
+      {% endif %}
+      {%- comment -%}
+        <div class="custom-arrow" onclick="clickhere()">&#8964;</div>
+      {%- endcomment -%}
+    </div>
+    <div class="qty_selectt">
+          <label for="Quantity" class="quantity-selector mobile">QTY</label>
+      <label for="Quantity" class="quantity-selector desktop">QTY:</label>
+      <div class="qtybox">
+        <span class="btnqty qtyminus icon-minus">-</span>
+        <input type="text" id="quantity" name="quantity" value="1" min="1" class="quantity-selector quantity-input" readonly="">
+        <span class="btnqty qtyplus icon-plus">+</span>
+      </div>
+    </div>
+    <div class="btn-add-prod"><input type="submit" value="Add" class="btn"/></div>
+  </div>
+
+
+
+</form>
+
+
+{%- comment -%}
+  <style>
+  .custom-arrow {
+  content: "\e900";
+  position: absolute;
+  color: #777;
+  font-family: icomoon;
+  font-weight: 700;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 88%;
+  }
+  div#select {
+  padding: 0;
+  }
+  div#select select {
+  width: 90px;
+  }
+  div#select:after {
+  left: 103%;
+  }
+  </style>
+{%- endcomment -%}
+
+{%- comment -%}
+  <script>
+  function clickhere() {
+  console.log("hurrah");
+  document.querySelector('#select select').click();
+  }
+  </script>
+{%- endcomment -%}
+
+<style>
+  .qty_selectt .quantity-selector.desktop {
+    display: block;
+    margin-bottom: 0px;
+    margin-right: 8px;
+  }
+
+  .qty_selectt .quantity-selector.mobile {
+    display: none;
+  }
+  @media only screen and (max-width: 768px) {
+    .qty_selectt .quantity-selector.desktop {
+      display: none;
+    }
+    .qty_selectt .quantity-selector.mobile {
+      display: block;
+      margin-right: 5px;
+    }
+  }
+  .btn-add-prod {
+    padding-left: 5px;
+  }
+  .custom-hide {
+    opacity: 0;
+  }
+</style>
