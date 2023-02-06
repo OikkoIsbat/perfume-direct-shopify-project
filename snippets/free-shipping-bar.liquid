@@ -1,0 +1,129 @@
+{% comment %} {% if settings.checkout_popup_free_shipping_yes %}
+    <div class="free-shipping hidden">
+        <div class="free-shipping-progress progress">
+            <div class="free-shipping-progress-bar progress-bar progress-bar-striped active"></div>
+        </div>
+        <div class="free-shipping-text js-free-shipping-text" data-count="{{ settings.checkout_popup_free_shipping_count }}">{{ settings.checkout_popup_free_condition_text }} ({{ 'general.theme.free_shipping_from' | t }} {{ settings.checkout_popup_free_shipping_count | times:100 | money }}).</div>
+        <div class="hidden js-free-shipping-alert">{{ 'general.theme.congrats' | t }}</div>
+    </div>
+    <script>
+        $(function(){
+            setTimeout(function(){
+                freeShippingInit();
+            },500)
+        })
+    </script>
+{% endif %} {% endcomment %}
+
+
+<div class="free-shipping-wrapper hide"> <div class="free-shipping-text"></div>
+  <div class="progressbar-container">
+    <div class="progressbar-wrapper" id="pregressbar"></div>
+  </div>
+  <a class="continue-shopping-link" href="/collections/all">CONTINUE SHOPPING</a>
+</div>
+
+<script>
+  console.log("cart page");
+  function updatePrice() {
+    jQuery.getJSON('/cart.js', function(cart) {
+      console.log("cart", cart);
+
+      let freeShippingValue = 50;
+{% if settings.cart_shipping_threshhold %}freeShippingValue={{settings.cart_shipping_threshhold}};{% endif %}
+    // let currentValue = parseFloat(document.querySelector("#shopify-section-my-cart-sidebar > form > div > button.c_submit > h5 > span").textContent.replace("£", ""));
+    let currentValue = cart.total_price ? parseFloat(cart.total_price/100) : 0 ;
+      
+    console.log(freeShippingValue);
+
+
+    let priceToGetFreeShipping = parseFloat(freeShippingValue - currentValue).toFixed(2);
+
+    let progressBarPercentage = 0;
+    if (priceToGetFreeShipping > 0) {
+      progressBarPercentage = (currentValue / freeShippingValue) * 100;
+      document.querySelectorAll(".free-shipping-text").forEach((elem) => {
+        elem.innerHTML = `YOU’RE <b> £${priceToGetFreeShipping} </b> AWAY FROM <b>FREE SHIPPING!</b>`;
+      });
+    } else {
+      progressBarPercentage = 100;
+      document.querySelectorAll(".free-shipping-text").forEach((elem) => {
+        elem.innerHTML = `CONGRATULATIONS! YOU'VE GOT <b>FREE SHIPPING!</b>`;
+      });
+    };
+    console.log(progressBarPercentage);
+
+    document.querySelectorAll(".progressbar-wrapper").forEach(elem => {
+      elem.style.width = progressBarPercentage + "%";
+    });
+      
+    });
+  }
+
+
+  let targetNode23 = document.querySelector("#shopify-section-header > header > div.new-nav-mobile-container > div:nth-child(9) > div > a");
+
+  const config2 = {
+    attributes: true,
+    childList: true,
+    subtree: true
+  };
+
+  const callback2 = (mutationList, observer) => {
+    console.log("trigger");
+    setTimeout(() =>{
+      document.querySelectorAll(".free-shipping-wrapper").forEach((elem) => {
+          elem.classList.remove("hide")
+      });
+      updatePrice();
+    },300);
+  };
+  const observer2 = new MutationObserver(callback2);
+  observer2.observe(targetNode23, config2);
+</script>
+<style>
+
+  .free-shipping-wrapper {
+    margin: 20px;
+    padding: 20px 16px 15px;
+    flex-flow: column;
+    background: #f5f5f5;
+    border-radius: 0;
+    border: #c5c8d1 solid 0;
+    text-align: center;
+    flex: auto;
+    align-items: center;
+  }
+  .progressbar-container {
+    position: relative;
+    max-width: 620px;
+    margin: 15px auto;
+    width: 100%;
+    height: 8px;
+    background: #e4e5e7;
+    border-radius: 0;
+
+  }
+  .progressbar-wrapper {
+    position: absolute;
+    left: 0;
+    display: block !important;
+    height: 8px;
+    background: linear-gradient(to right, #a7d2c8 7%, #e5d092 54%, #e7c4be 93%);
+    transition: width 2s ease;
+    border-radius: 0;
+  }
+  .continue-shopping-link {
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    color: #75939e;
+    text-decoration: underline;
+  }
+  .progress-desktop .free-shipping-wrapper {
+    margin: 0 0 20px 0;
+  }
+  .free-shipping-wrapper.hide {
+    display: none;
+  }
+</style>

@@ -1,0 +1,173 @@
+<div class="hdr-mobile show-mobile display-1024">
+    <div class="hdr-topline display-1024">
+        <div class="container mobilealign">
+            <div class="hdr-topline-center">
+                {% comment %} <div class="custom-text d-none d-md-inline">{{ section.settings.delivery }}</div>
+                <div class="custom-text">{{ section.settings.phone_1 }}</div> {% endcomment %}
+                <div class="menu-toggle" style="margin-left:-10px"> <a href="#" class="mobilemenu-toggle"><i class="icon-menu" style="border-right:none!important;
+    height: 57px;
+    padding-top: 15px;"></i></a> </div>
+              <!--<div class= "vertical0"></div>-->
+ <div class="header_link1 fixingmain2" style = "border:none; padding:0!important;margin-left:-26px">
+<!--                 <img src="//cdn.shopify.com/s/files/1/0429/5219/6253/t/2/assets/UK-Flag.svg?v=12744090195279608171" alt=""> -->
+                   <div class="l-icon-container">
+                       <a class="m-light">
+                           {{ 'lightning-unselected.jpg' | asset_url | img_tag }}
+                       </a>
+                   </div>
+
+                      <div class="d-icon-container" style="display: none">
+                      <a class="m-dark">
+                        {{ 'lightning.jpg' | asset_url | img_tag }}
+                      </a>
+                </div>
+   
+              </div>               
+              
+            
+              
+              <!--<div class= "vertical"></div>-->
+                <div class="col-auto logo-holder middlelogo" style="left:5%;">{% include 'header-logo' %}</div>     
+<!--<div class= "vertical2"></div>-->
+                
+                     <a href="/account/login">
+<!--                         <i class=" icon-person dropdown-link2 alfiv" style="vertical-align:middle;"></i> -->
+                       {{ 'user.svg' | asset_url | img_tag }}
+                    </a>
+           
+       <!--<div class= "vertical3"></div>-->
+  <!--<div class= "vertical3"></div>-->
+                <div class="minicart-holder d-none" style = "margin-right: -15px!important;">{% include 'header-cart' %}</div>
+          		 <div class="minicart-holder">{% include 'header-cart' %}</div>  
+          </div>
+            <!-- /Menu Toggle -->
+            <div class="hdr-topline-right links-holder">
+            </div>
+        </div>
+    </div>
+    <div class="hdr-content">
+        <div class="container">
+            <div class="logo-holder">
+              {% include 'header-logo' %}
+            </div>
+            <div class="minicart-holder">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="search-holder mobile hideweb display-1024">
+    {% include 'header-search-mobilenavigation' %}
+</div>
+
+<div class="q-nav-container-mobile">
+    <div class="l-nav-items-mobile">
+        {% for link in linklists.new-lightening-menu.links %}
+        <a href={{ link.url }} class="n-item-mobile">
+                {{ link.title }}
+
+        </a>
+          {% endfor %}
+    </div>
+
+</div>
+
+<script>
+       document.querySelector('.m-light').addEventListener("click", functionShow);
+     document.querySelector('.m-dark').addEventListener("click", functionShow);
+
+    // document.querySelector('.new-nav-container').style.display = "none";
+    document.querySelector('.d-icon-container').style.display = "none";
+    document.querySelector('.q-nav-container-mobile').style.display = "none";
+
+    var showFlag = false;
+    function functionShow(){
+        showFlag = !showFlag;
+        if(showFlag === false){
+            document.querySelector('.q-nav-container-mobile').style.display = "none";
+            document.querySelector('.l-icon-container').style.display = "block";
+            document.querySelector('.d-icon-container').style.display = "none";
+            document.querySelectorAll('.mmenu-js li div').forEach(item => item.classList.remove("light-sizing"));
+        }
+        else{
+            document.querySelectorAll('.mmenu-js li div').forEach(item => item.classList.add("light-sizing"));
+            document.querySelector('.l-icon-container').style.display = "none";
+            document.querySelector('.d-icon-container').style.display = "block";
+            document.querySelector('.q-nav-container-mobile').style.display = "block";
+           
+        }
+    }
+</script>
+
+<style>
+
+    .q-nav-container-mobile {
+        display: none;
+    }
+
+    .l-nav-items-mobile {
+        display: flex;
+        overflow-x: scroll;
+    }
+
+    .n-item-mobile {
+        padding: 8px;
+/*         min-width: 70px; */
+        color: #fff;
+     white-space: nowrap;
+      margin-right:5px;
+    }
+
+    .n-item-mobile:hover{
+      color: #fff !important;
+        transition: none !important;
+    }
+
+      .n-item-mobile:focus{
+      color: #fff !important;
+    }
+   .n-item-mobile:visited{
+     color: white !important;
+   }
+
+/*     .new-nav-mobile-container {
+        display: none;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .vl {
+        border-left: 2px solid #dddddd;
+        height: 43px;
+    } */
+
+
+    @media screen and (min-width:375px) and (max-width:980px) {
+/*               #atharva_minicart_count {
+            font-size: 11px;
+            top: -11px !important;
+            min-width: 1.5em;
+            height: 2em;
+        }
+        .new-nav-mobile-container {
+            display: flex;
+        } */
+
+          .n-item-mobile:hover{
+      color: #fff !important;
+        transition: none !important;
+    }
+
+      .n-item-mobile:focus{
+      color: #fff !important;
+    }
+   .n-item-mobile:visited{
+     color: white !important;
+   }
+
+        .q-nav-container-mobile {
+            display: flex;
+            background-color: rgb(0, 0, 0);
+        }
+    }
+</style>

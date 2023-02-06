@@ -1,0 +1,222 @@
+<div class="new-nav-mobile-container">
+    <div class="menu-toggle" style="padding-left: 5px">
+        <a href="#" class="mobilemenu-toggle new-toogle">
+            <i class="icon-menu fixingmain new-style-icon"
+                style="border-right:none!important; height: 57px; padding-top: 15px; margin-left:-9px"></i>
+        </a>
+    </div>
+    <div class="vl"></div>
+    <div class="" style="border:3px solid #fff;">
+        <!-- <img src="//cdn.shopify.com/s/files/1/0429/5219/6253/t/2/assets/UK-Flag.svg?v=12744090195279608171" alt=""> -->
+        <div class="light-icon-container">
+            <a class="mobile-light">
+                {{ 'lightning-unselected.jpg' | asset_url | img_tag }}
+            </a>
+            <div class="test-word-mobile">
+                <div class="light-word-mobile">SELECT HERE FOR SPEED NAVIGATION</div>
+                {{ 'rectangle.svg' | asset_url | img_tag }}
+            </div>
+        </div>
+        <div class="dark-icon-container" style="display: none">
+            <a class="mobile-dark">
+                {{ 'lightning.jpg' | asset_url | img_tag }}
+            </a>
+        </div>
+    </div>
+    <div class="vl"></div>
+    <div class="col-auto logo-holder middlelogo logo-new-style">{% include 'header-logo' %}</div>
+    <div class="vl"></div>
+    <a href="/account/login">
+<!--         <i class=" icon-person" style="vertical-align:middle;"></i> -->
+      {{ 'user.svg' | asset_url | img_tag }}
+    </a>
+    <div class="vl"></div>
+    <div class="">{% include 'header-cart' %}</div>
+
+</div>
+
+<div class="search-holder mobile hideweb display-1024">
+    {% include 'header-search-style-1' %}
+</div>
+
+
+<div class="quick-nav-container-mobile">
+    <div class="light-nav-items-mobile">
+        {% for link in linklists.new-lightening-menu.links %}
+        <a href={{ link.url }} class="nav-item-mobile">
+                {{ link.title }}
+
+        </a>
+          {% endfor %}
+    </div>
+
+</div>
+
+<script>
+    function setCookie(c_name, value, exdays) { var exdate = new Date(); exdate.setDate(exdate.getDate() + exdays); var c_value = escape(value) + ((exdays == null) ? "" : "; expires=" + exdate.toUTCString()); document.cookie = c_name + "=" + c_value; }
+
+    function getCookie(c_name) { var c_value = document.cookie; var c_start = c_value.indexOf(" " + c_name + "="); if (c_start == -1) { c_start = c_value.indexOf(c_name + "="); } if (c_start == -1) { c_value = null; } else { c_start = c_value.indexOf("=", c_start) + 1; var c_end = c_value.indexOf(";", c_start); if (c_end == -1) { c_end = c_value.length; } c_value = unescape(c_value.substring(c_start, c_end)); } return c_value; }
+
+    checkSession();
+
+    function checkSession() {
+
+        var c = getCookie("gotit");
+        if (c === "yes") {
+            document.querySelector('.test-word-mobile').style.display = "none";
+        } else {
+            // setTimeout(() => {
+            //     const box = document.querySelector('.test-word');
+            //     box.style.display = 'visible';
+            // }, 5000);
+            $('.test-word-mobile').show().delay(5000).fadeOut();
+        }
+        setCookie("gotit", "yes", 365); // expire in 1 year; or use null to never expire
+    }
+    document.querySelector('.mobile-light').addEventListener("click", functionShow);
+     document.querySelector('.mobile-dark').addEventListener("click", functionShow);
+
+    // document.querySelector('.new-nav-container').style.display = "none";
+    document.querySelector('.dark-icon-container').style.display = "none";
+    document.querySelector('.quick-nav-container-mobile').style.display = "none";
+
+    var showFlag = false;
+    function functionShow(){
+        showFlag = !showFlag;
+        if(showFlag === false){
+            document.querySelector('.quick-nav-container-mobile').style.display = "none";
+            document.querySelector('.light-icon-container').style.display = "block";
+            document.querySelector('.dark-icon-container').style.display = "none";
+            document.querySelectorAll('.mmenu-js li div').forEach(item => item.classList.remove("light-sizing"));
+        }
+        else{
+            document.querySelectorAll('.mmenu-js li div').forEach(item => item.classList.add("light-sizing"));
+            document.querySelector('.light-icon-container').style.display = "none";
+            document.querySelector('.dark-icon-container').style.display = "block";
+            document.querySelector('.quick-nav-container-mobile').style.display = "block";
+           
+        }
+    }
+</script>
+
+<style>
+  .logo-new-style{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+      .user-prof img{
+        width: 22px;
+    }
+         .light-sizing{
+        top:74% !important;
+     }
+    .test-word-mobile {
+        margin-left: -81px;
+        position: absolute;
+        z-index: 9;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .light-word-mobile {
+        position: absolute;
+        /* width: 141px; */
+        /* height: 32px; */
+        -webkit-padding-end: 35px;
+      -webkit-padding-start: 35px;
+        color: #fff;
+         -webkit-margin-before: 5px;
+      -webkit-margin-after: -6px;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 12px;
+        font-weight: 300;
+        text-align: center;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.33;
+        letter-spacing: normal;
+    }
+
+    .quick-nav-container-mobile {
+        display: none;
+    }
+
+    .light-nav-items-mobile {
+        display: flex;
+        overflow-x: scroll;
+    }
+
+    .nav-item-mobile {
+        padding: 8px;
+/*         min-width: 70px; */
+        color: #fff;
+     white-space: nowrap;
+      margin-right:5px;
+    }
+  .nav-item-mobile:focus{
+    color: white !important;
+  }
+    .nav-item-mobile:visited{
+    color: white !important;
+  }
+    .nav-item-mobile:hover{
+    color: white !important;
+  }
+
+    .new-nav-mobile-container {
+        display: none;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .vl {
+        border-left: 2px solid #dddddd;
+        height: 43px;
+    }
+
+   @media screen and (min-width:360px) and (max-width:375px) {
+     .logo img{
+       max-width: 107px !important;
+       margin-right: 23px;
+     }
+   }
+ 
+    @media screen and (min-width:375px) and (max-width:980px) {
+      .light-word-mobile{
+        -webkit-margin-start: 11px;
+      }
+              #atharva_minicart_count {
+            font-size: 11px;
+            top: -11px !important;
+            min-width: 1.5em;
+            height: 2em;
+        }
+        .new-nav-mobile-container {
+            display: flex;
+        }
+
+        .quick-nav-container-mobile {
+            display: flex;
+            background-color: rgb(0, 0, 0);
+        }
+    }
+
+    /* @media screen and (min-width:374px) and (max-width: 390px){
+        .mobile-light{
+            margin-left: 10px !important;
+        }
+        .test-word{
+            margin-left: -40px !important;
+            margin-top: 10px;
+        }
+        .light-word{
+        width: 106px !important;
+        height: 48px !important;
+        }
+        .test-word img{
+            width: 130px;
+            height: 74px;
+        }
+  } */
+</style>
