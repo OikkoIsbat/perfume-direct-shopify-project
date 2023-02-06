@@ -1,0 +1,267 @@
+{
+  "wrapper": "div#black-friday.custom-landing",
+  "sections": {
+    "Hero-slideshow": {
+      "type": "slideshow-christmas",
+      "blocks": {
+        "4824baaa-d0d1-4959-be6e-caa11497303f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/group-4.png",
+            "image_mobile": "shopify:\/\/shop_images\/flavours-banner_8dd651f8-a40e-4d7e-9b6d-d2fbdc87ba48.png",
+            "enable": true,
+            "bg_v_alignment": "bg-middle",
+            "link_button_yes": false,
+            "link_all_slide": false,
+            "link_button_text": "Shop now",
+            "link_button_small": false,
+            "btn_hor_aligment": "center",
+            "button_text_color": "#ffffff",
+            "button_bgcolor": "#ff358b",
+            "button_othercss": "",
+            "captions_half": false,
+            "captions_border": "no-border",
+            "captions_h_alignment": "txt-center",
+            "captions_v_alignment": "txt-middle",
+            "caption_1_yes": true,
+            "caption_1_hidemobile_yes": false,
+            "caption_1": "<p class=\"text-black\">Black<\/p><p class=\"text-white\">Friday<\/p>",
+            "caption_1_color": "#ffffff",
+            "caption_1_hor_alignment": "center",
+            "caption_1_bgcolor": "",
+            "caption_1_fontweight": "400",
+            "caption_1_fontsize": "lg",
+            "caption_1_lineheight": "1.00",
+            "caption_1_othercss": "",
+            "caption_2_yes": false,
+            "caption_2_hidemobile_yes": false,
+            "caption_2": "",
+            "caption_2_hor_alignment": "center",
+            "caption_2_color": "#ffffff",
+            "caption_2_bgcolor": "",
+            "caption_2_fontweight": "400",
+            "caption_2_fontsize": "xs",
+            "caption_2_lineheight": "1.00",
+            "caption_2_othercss": "font-size: 0.18em",
+            "caption_3_yes": true,
+            "caption_3_hidemobile_yes": false,
+            "caption_3": "<span class=\"black-friday-text\">AT PERFUME DIRECT<\/span>",
+            "caption_3_hor_alignment": "center",
+            "caption_3_color": "#ffffff",
+            "caption_3_bgcolor": "",
+            "caption_3_fontweight": "300",
+            "caption_3_fontsize": "md",
+            "caption_3_lineheight": "1.00",
+            "caption_3_othercss": "font-size: 0.2em",
+            "caption_num_yes": false,
+            "caption_num_hidemobile_yes": true,
+            "caption_num_hor_alignment": "center",
+            "caption_num1": "01",
+            "caption_num1_color": "#e1dde5",
+            "caption_num1_fontweight": "900",
+            "caption_num1_othercss": "",
+            "caption_num2": "NEW AWESOME<br>COLLECTION",
+            "caption_num2_color": "#868686",
+            "caption_num2_fontweight": "400",
+            "caption_num2_fontsize": "xxs",
+            "caption_num2_lineheight": "1.64",
+            "caption_num2_othercss": ""
+          }
+        }
+      },
+      "block_order": [
+        "4824baaa-d0d1-4959-be6e-caa11497303f"
+      ],
+      "settings": {
+        "block_width": "fullwidth",
+        "outer_margin": "mt-0",
+        "show_under_header": false,
+        "autoplay": true,
+        "dots": false,
+        "dotspos": false,
+        "dotsposide": "vert-dots--right",
+        "dotsfullwidth": false,
+        "arrows": false,
+        "arowsdark": false,
+        "arowsbg": false,
+        "arowsshift": false,
+        "arowsshiftside": "bnslider-arrows--pullright",
+        "autoplay_speed": "5000",
+        "slideshow_height": "lg",
+        "keep_scale": false,
+        "keep_scale_width": "1920",
+        "keep_scale_height": "768",
+        "keep_scale_mwidth": "768",
+        "keep_scale_mheight": "375",
+        "snow": false,
+        "right_column": false,
+        "column": "right",
+        "bnr_source": "admin",
+        "html": ""
+      }
+    },
+    "1655715863df986d98": {
+      "type": "carousel-for-christmas-page",
+      "settings": {
+        "outer_margin": "mt-6",
+        "title": "BLACK FRIDAY BEST SELLERS",
+        "font_size": 20,
+        "title_fontweight": "400",
+        "button_bg": "#ffffff",
+        "button_text_color": "#000000",
+        "button_border_color": "#000000",
+        "collection": "black-friday-cyber-monday",
+        "limit": "8",
+        "show_view_all": true,
+        "show_grid_mobile": false,
+        "tabs": false,
+        "tags": "popular, sale, new",
+        "per_row_desktop": "8"
+      }
+    },
+    "1655715932bb2cb8b8": {
+      "type": "christmas-new-images",
+      "blocks": {
+        "16557159325f79f302-0": {
+          "type": "worker",
+          "settings": {
+            "enable": true,
+            "link": "https:\/\/www.perfumedirect.com\/collections\/black-friday-cyber-monday\/womens-perfume",
+            "image": "shopify:\/\/shop_images\/BFCM_gifts_for_her.png",
+            "title": "GIFTS FOR HER"
+          }
+        },
+        "16557159325f79f302-1": {
+          "type": "worker",
+          "settings": {
+            "enable": true,
+            "link": "https:\/\/www.perfumedirect.com\/collections\/black-friday-cyber-monday\/mens-aftershave",
+            "image": "shopify:\/\/shop_images\/BFCM_gifts_for_him.png",
+            "title": "GIFTS FOR HIM"
+          }
+        },
+        "abe72631-4773-4d15-af62-22181ba10133": {
+          "type": "worker",
+          "settings": {
+            "enable": true,
+            "link": "https:\/\/www.perfumedirect.com\/collections\/black-friday-cyber-monday\/50-100",
+            "image": "shopify:\/\/shop_images\/BFCM_luxury_gifts.png",
+            "title": "LUXURY GIFTS"
+          }
+        },
+        "92ba6c82-ee0a-431b-a2ae-a233479dfc69": {
+          "type": "worker",
+          "settings": {
+            "enable": true,
+            "link": "https:\/\/www.perfumedirect.com\/collections\/black-friday-cyber-monday\/under-20",
+            "image": "shopify:\/\/shop_images\/BFCM_budget.png",
+            "title": "BUDGET GIFTS"
+          }
+        }
+      },
+      "block_order": [
+        "16557159325f79f302-0",
+        "16557159325f79f302-1",
+        "abe72631-4773-4d15-af62-22181ba10133",
+        "92ba6c82-ee0a-431b-a2ae-a233479dfc69"
+      ],
+      "settings": {
+        "enable": true,
+        "title": ""
+      }
+    },
+    "1655716039bbd51bb3": {
+      "type": "brands-christmas",
+      "blocks": {
+        "1655716039678a7dce-0": {
+          "type": "brand",
+          "settings": {
+            "enable": true,
+            "title": "mont-blanc",
+            "image": "shopify:\/\/shop_images\/montblanc-logo.png",
+            "link": "",
+            "link_target": "_self"
+          }
+        },
+        "1655716039678a7dce-1": {
+          "type": "brand",
+          "settings": {
+            "enable": true,
+            "title": "paco-rabanne",
+            "image": "shopify:\/\/shop_images\/paco-rabanne-xmas.png",
+            "link": "",
+            "link_target": "_self"
+          }
+        },
+        "1655716039678a7dce-2": {
+          "type": "brand",
+          "settings": {
+            "enable": true,
+            "title": "calvin-klein",
+            "image": "shopify:\/\/shop_images\/calvin-klein-logo.png",
+            "link": "",
+            "link_target": "_self"
+          }
+        },
+        "1655716039678a7dce-3": {
+          "type": "brand",
+          "settings": {
+            "enable": true,
+            "title": "thierry-mugler",
+            "image": "shopify:\/\/shop_images\/thierry-mugler-logo-png-1.png",
+            "link": "",
+            "link_target": "_self"
+          }
+        }
+      },
+      "block_order": [
+        "1655716039678a7dce-0",
+        "1655716039678a7dce-1",
+        "1655716039678a7dce-2",
+        "1655716039678a7dce-3"
+      ],
+      "settings": {
+        "enable": true,
+        "outer_margin": "mt-0",
+        "image": "shopify:\/\/shop_images\/snow-bg_a3f81b65-d781-4f9d-b5b2-42641cc0567b.png",
+        "heading": "TOP BLACK FRIDAY BRANDS",
+        "link_button_yes": true,
+        "link_button_text": "SHOP ALL BRANDS",
+        "link": "",
+        "link_target": "_self"
+      }
+    },
+    "1655716139e3036fb3": {
+      "type": "christmas-blog-section",
+      "settings": {
+        "outer_margin": "mt-65",
+        "heading": "BLACK FRIDAY LATEST",
+        "from_blog_id": "news",
+        "article-tag": "Black Friday",
+        "from_blog_limit": "4"
+      }
+    },
+    "1655716153dbf87c4c": {
+      "type": "landing_bottom_section",
+      "settings": {
+        "bt_bg_image": "shopify:\/\/shop_images\/md-bg.png",
+        "text-title-christmas": "Black Friday 2022 Fragrance Deals",
+        "text-title-family": "BebasNeue",
+        "title_colour": "#ffffff",
+        "font_size": 44,
+        "text-content-christmas": "Black Friday perfume and aftershave deals are now live at Perfume Direct. Finding Black Friday perfume and aftershaves in the UK has never been easier, our extensive range of scents and sundries feature many luxury and renowned brands, so what are you waiting for? Grab your Black Friday perfume from us, with an exclusive discount. Didn't see something you wanted? Not sure where to start? Why not check our perfume gift sets or our aftershave gift sets.",
+        "textarea_background": "#000000",
+        "textarea_colour": "#ffffff",
+        "textarea_fontweight": "JosefinSans-Thin_Light"
+      }
+    }
+  },
+  "order": [
+    "Hero-slideshow",
+    "1655715863df986d98",
+    "1655715932bb2cb8b8",
+    "1655716039bbd51bb3",
+    "1655716139e3036fb3",
+    "1655716153dbf87c4c"
+  ]
+}

@@ -1,0 +1,307 @@
+{
+  "wrapper": "div#christmas-landing.custom-landing",
+  "sections": {
+    "Hero-slideshow": {
+      "type": "slideshow-christmas",
+      "blocks": {
+        "4824baaa-d0d1-4959-be6e-caa11497303f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/new_new_xmas_banner.png",
+            "image_mobile": "shopify:\/\/shop_images\/christmas_shop_mobile_banner.png",
+            "enable": true,
+            "bg_v_alignment": "bg-middle",
+            "link_button_yes": false,
+            "link_all_slide": false,
+            "link_button_text": "Shop now",
+            "link_button_small": false,
+            "btn_hor_aligment": "center",
+            "button_text_color": "#ffffff",
+            "button_bgcolor": "#ff358b",
+            "button_othercss": "",
+            "captions_half": false,
+            "captions_border": "no-border",
+            "captions_h_alignment": "txt-center",
+            "captions_v_alignment": "txt-middle",
+            "caption_1_yes": true,
+            "caption_1_hidemobile_yes": false,
+            "caption_1": "Christmas",
+            "caption_1_color": "#222222",
+            "caption_1_hor_alignment": "left",
+            "caption_1_bgcolor": "",
+            "caption_1_fontweight": "400",
+            "caption_1_fontsize": "lg",
+            "caption_1_lineheight": "1.00",
+            "caption_1_othercss": "",
+            "caption_2_yes": false,
+            "caption_2_hidemobile_yes": false,
+            "caption_2": "",
+            "caption_2_hor_alignment": "center",
+            "caption_2_color": "#ffffff",
+            "caption_2_bgcolor": "",
+            "caption_2_fontweight": "400",
+            "caption_2_fontsize": "xs",
+            "caption_2_lineheight": "1.00",
+            "caption_2_othercss": "font-size: 0.18em",
+            "caption_3_yes": true,
+            "caption_3_hidemobile_yes": false,
+            "caption_3": "AT PERFUME DIRECT",
+            "caption_3_hor_alignment": "left",
+            "caption_3_color": "#000000",
+            "caption_3_bgcolor": "",
+            "caption_3_fontweight": "300",
+            "caption_3_fontsize": "md",
+            "caption_3_lineheight": "1.00",
+            "caption_3_othercss": "font-size: 20px",
+            "caption_num_yes": false,
+            "caption_num_hidemobile_yes": true,
+            "caption_num_hor_alignment": "center",
+            "caption_num1": "01",
+            "caption_num1_color": "#e1dde5",
+            "caption_num1_fontweight": "900",
+            "caption_num1_othercss": "",
+            "caption_num2": "NEW AWESOMECOLLECTION",
+            "caption_num2_color": "#868686",
+            "caption_num2_fontweight": "400",
+            "caption_num2_fontsize": "xxs",
+            "caption_num2_lineheight": "1.64",
+            "caption_num2_othercss": ""
+          }
+        }
+      },
+      "block_order": [
+        "4824baaa-d0d1-4959-be6e-caa11497303f"
+      ],
+      "settings": {
+        "block_width": "fullwidth",
+        "outer_margin": "mt-0",
+        "show_under_header": false,
+        "autoplay": true,
+        "dots": false,
+        "dotspos": false,
+        "dotsposide": "vert-dots--right",
+        "dotsfullwidth": false,
+        "arrows": false,
+        "arowsdark": false,
+        "arowsbg": false,
+        "arowsshift": false,
+        "arowsshiftside": "bnslider-arrows--pullright",
+        "autoplay_speed": "5000",
+        "slideshow_height": "lg",
+        "keep_scale": false,
+        "keep_scale_width": "1920",
+        "keep_scale_height": "768",
+        "keep_scale_mwidth": "768",
+        "keep_scale_mheight": "375",
+        "snow": false,
+        "right_column": false,
+        "column": "right",
+        "bnr_source": "admin",
+        "html": ""
+      }
+    },
+    "1655715863df986d98": {
+      "type": "carousel-for-christmas-page",
+      "settings": {
+        "outer_margin": "mt-6",
+        "title": "CHRISTMAS BEST SELLERS",
+        "font_size": 20,
+        "title_fontweight": "400",
+        "button_bg": "#ffffff",
+        "button_text_color": "#000000",
+        "button_border_color": "#000000",
+        "collection": "christmas-bestsellers",
+        "limit": "8",
+        "show_view_all": true,
+        "show_grid_mobile": false,
+        "tabs": false,
+        "tags": "popular, sale, new",
+        "per_row_desktop": "8"
+      }
+    },
+    "1655715932bb2cb8b8": {
+      "type": "christmas-new-images",
+      "blocks": {
+        "16557159325f79f302-0": {
+          "type": "worker",
+          "settings": {
+            "enable": true,
+            "link": "https:\/\/www.perfumedirect.com\/collections\/christmas-gifts-for-her",
+            "image": "shopify:\/\/shop_images\/christmas_gifts_for_her.png",
+            "title": "GIFTS FOR HER"
+          }
+        },
+        "16557159325f79f302-1": {
+          "type": "worker",
+          "settings": {
+            "enable": true,
+            "link": "https:\/\/www.perfumedirect.com\/collections\/christmas-gifts-for-him",
+            "image": "shopify:\/\/shop_images\/Gifts_for_him.png",
+            "title": "GIFTS FOR HIM"
+          }
+        },
+        "abe72631-4773-4d15-af62-22181ba10133": {
+          "type": "worker",
+          "settings": {
+            "enable": true,
+            "link": "https:\/\/www.perfumedirect.com\/collections\/luxury-christmas-gifts",
+            "image": "shopify:\/\/shop_images\/luxury_gifts.png",
+            "title": "LUXURY CHRISTMAS GIFTS"
+          }
+        },
+        "92ba6c82-ee0a-431b-a2ae-a233479dfc69": {
+          "type": "worker",
+          "settings": {
+            "enable": true,
+            "link": "https:\/\/www.perfumedirect.com\/collections\/budget-christmas-gifts",
+            "image": "shopify:\/\/shop_images\/budget_gifts.png",
+            "title": "BUDGET CHRISTMAS GIFTS"
+          }
+        },
+        "a6c0f28c-df12-449b-b8d0-5248c90914a3": {
+          "type": "worker",
+          "settings": {
+            "enable": true,
+            "link": "https:\/\/www.perfumedirect.com\/collections\/christmas-gift-sets",
+            "image": "shopify:\/\/shop_images\/Xmas_gift_sets_for_her.png",
+            "title": "CHRISTMAS GIFT SETS"
+          }
+        },
+        "8781d020-9950-43c8-8f17-37fa1aaf8d36": {
+          "type": "worker",
+          "settings": {
+            "enable": true,
+            "link": "https:\/\/www.perfumedirect.com\/collections\/christmas-stocking-fillers",
+            "image": "shopify:\/\/shop_images\/Stocking_fillers.png",
+            "title": "STOCKING FILLERS"
+          }
+        },
+        "b5d4dde6-aa9a-42be-b06f-b0a841f06ad5": {
+          "type": "worker",
+          "settings": {
+            "enable": true,
+            "link": "https:\/\/www.perfumedirect.com\/collections\/christmas-bestsellers",
+            "image": "shopify:\/\/shop_images\/Xmas_bestselling.png",
+            "title": "BESTSELLING FRAGRANCES"
+          }
+        },
+        "e26a8fe1-b58d-458c-9ed3-f174e70f331c": {
+          "type": "worker",
+          "settings": {
+            "enable": true,
+            "link": "https:\/\/www.perfumedirect.com\/collections\/new-in-beauty",
+            "image": "shopify:\/\/shop_images\/new_in_beauty.png",
+            "title": "NEW IN BEAUTY"
+          }
+        }
+      },
+      "block_order": [
+        "16557159325f79f302-0",
+        "16557159325f79f302-1",
+        "abe72631-4773-4d15-af62-22181ba10133",
+        "92ba6c82-ee0a-431b-a2ae-a233479dfc69",
+        "a6c0f28c-df12-449b-b8d0-5248c90914a3",
+        "8781d020-9950-43c8-8f17-37fa1aaf8d36",
+        "b5d4dde6-aa9a-42be-b06f-b0a841f06ad5",
+        "e26a8fe1-b58d-458c-9ed3-f174e70f331c"
+      ],
+      "settings": {
+        "enable": true,
+        "title": ""
+      }
+    },
+    "1655716039bbd51bb3": {
+      "type": "brands-christmas",
+      "blocks": {
+        "1655716039678a7dce-0": {
+          "type": "brand",
+          "settings": {
+            "enable": true,
+            "title": "armani-xmas",
+            "image": "shopify:\/\/shop_images\/armani-xmas.png",
+            "link": "",
+            "link_target": "_self"
+          }
+        },
+        "1655716039678a7dce-1": {
+          "type": "brand",
+          "settings": {
+            "enable": true,
+            "title": "jpg-xmas",
+            "image": "shopify:\/\/shop_images\/jpg-xmas.png",
+            "link": "",
+            "link_target": "_self"
+          }
+        },
+        "1655716039678a7dce-2": {
+          "type": "brand",
+          "settings": {
+            "enable": true,
+            "title": "jimmy-choo-xmas",
+            "image": "shopify:\/\/shop_images\/jimmy-choo-xmas.png",
+            "link": "",
+            "link_target": "_self"
+          }
+        },
+        "1655716039678a7dce-3": {
+          "type": "brand",
+          "settings": {
+            "enable": true,
+            "title": "paco-rabanne-xmas",
+            "image": "shopify:\/\/shop_images\/paco-rabanne-xmas_7e077f6c-3252-4ace-8ea8-0038532e45b0.png",
+            "link": "",
+            "link_target": "_self"
+          }
+        }
+      },
+      "block_order": [
+        "1655716039678a7dce-0",
+        "1655716039678a7dce-1",
+        "1655716039678a7dce-2",
+        "1655716039678a7dce-3"
+      ],
+      "settings": {
+        "enable": true,
+        "outer_margin": "mt-0",
+        "image": "shopify:\/\/shop_images\/snow-bg_e3bff41c-979d-4848-b00b-088bd257cd7e.png",
+        "heading": "TOP CHRISTMAS BRANDS",
+        "link_button_yes": true,
+        "link_button_text": "SHOP ALL BRANDS",
+        "link": "",
+        "link_target": "_self"
+      }
+    },
+    "1655716139e3036fb3": {
+      "type": "christmas-blog-section",
+      "settings": {
+        "outer_margin": "mt-65",
+        "heading": "CHRISTMAS LATEST",
+        "from_blog_id": "news",
+        "article-tag": "Christmas",
+        "from_blog_limit": "4"
+      }
+    },
+    "1655716153dbf87c4c": {
+      "type": "landing_bottom_section",
+      "settings": {
+        "bt_bg_image": "shopify:\/\/shop_images\/Christmas-BG_2x_0bd58840-8465-40cc-b9a7-f13c773c769a.png",
+        "text-title-christmas": "Best Christmas Fragrances 2022",
+        "text-title-family": "DancingScript",
+        "title_colour": "#e4d092",
+        "font_size": 58,
+        "text-content-christmas": "Christmas fragrances have landed at Perfume Direct. Finding the perfect Christmas fragrance for a loved one makes for a gift that keeps on giving well into the new year and beyond. We stock the best Christmas fragrances from many luxury and designer brands, as well as Christmas perfume gift sets and an array of Christmas perfumes.",
+        "textarea_background": "#003830",
+        "textarea_colour": "#ffffff",
+        "textarea_fontweight": "JosefinSans-Thin_Light"
+      }
+    }
+  },
+  "order": [
+    "Hero-slideshow",
+    "1655715863df986d98",
+    "1655715932bb2cb8b8",
+    "1655716039bbd51bb3",
+    "1655716139e3036fb3",
+    "1655716153dbf87c4c"
+  ]
+}

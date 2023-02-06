@@ -1,0 +1,267 @@
+{
+  "wrapper": "div#cyber-monday.custom-landing",
+  "sections": {
+    "Hero-slideshow": {
+      "type": "slideshow-christmas",
+      "blocks": {
+        "4824baaa-d0d1-4959-be6e-caa11497303f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/cyber-bg_5ff519e2-c349-47de-a0a1-b13ee06a9001.png",
+            "image_mobile": "shopify:\/\/shop_images\/flavours-banner.png",
+            "enable": true,
+            "bg_v_alignment": "bg-middle",
+            "link_button_yes": false,
+            "link_all_slide": false,
+            "link_button_text": "Shop now",
+            "link_button_small": false,
+            "btn_hor_aligment": "center",
+            "button_text_color": "#ffffff",
+            "button_bgcolor": "#ff358b",
+            "button_othercss": "",
+            "captions_half": false,
+            "captions_border": "no-border",
+            "captions_h_alignment": "txt-center",
+            "captions_v_alignment": "txt-middle",
+            "caption_1_yes": true,
+            "caption_1_hidemobile_yes": false,
+            "caption_1": "<img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/1442\/8846\/files\/cyber-monday.png?v=1655718903\" class=\"cyber-monday desktop\">",
+            "caption_1_color": "#ffffff",
+            "caption_1_hor_alignment": "center",
+            "caption_1_bgcolor": "",
+            "caption_1_fontweight": "400",
+            "caption_1_fontsize": "lg",
+            "caption_1_lineheight": "1.00",
+            "caption_1_othercss": "",
+            "caption_2_yes": false,
+            "caption_2_hidemobile_yes": false,
+            "caption_2": "",
+            "caption_2_hor_alignment": "center",
+            "caption_2_color": "#ffffff",
+            "caption_2_bgcolor": "",
+            "caption_2_fontweight": "400",
+            "caption_2_fontsize": "xs",
+            "caption_2_lineheight": "1.00",
+            "caption_2_othercss": "font-size: 0.18em",
+            "caption_3_yes": true,
+            "caption_3_hidemobile_yes": false,
+            "caption_3": "<span class=\"cyber-monday-text\">AT PERFUME DIRECT<\/span>",
+            "caption_3_hor_alignment": "center",
+            "caption_3_color": "#ffffff",
+            "caption_3_bgcolor": "",
+            "caption_3_fontweight": "300",
+            "caption_3_fontsize": "md",
+            "caption_3_lineheight": "1.00",
+            "caption_3_othercss": "font-size: 0.2em",
+            "caption_num_yes": false,
+            "caption_num_hidemobile_yes": true,
+            "caption_num_hor_alignment": "center",
+            "caption_num1": "01",
+            "caption_num1_color": "#e1dde5",
+            "caption_num1_fontweight": "900",
+            "caption_num1_othercss": "",
+            "caption_num2": "NEW AWESOME<br>COLLECTION",
+            "caption_num2_color": "#868686",
+            "caption_num2_fontweight": "400",
+            "caption_num2_fontsize": "xxs",
+            "caption_num2_lineheight": "1.64",
+            "caption_num2_othercss": ""
+          }
+        }
+      },
+      "block_order": [
+        "4824baaa-d0d1-4959-be6e-caa11497303f"
+      ],
+      "settings": {
+        "block_width": "fullwidth",
+        "outer_margin": "mt-0",
+        "show_under_header": false,
+        "autoplay": true,
+        "dots": false,
+        "dotspos": false,
+        "dotsposide": "vert-dots--right",
+        "dotsfullwidth": false,
+        "arrows": false,
+        "arowsdark": false,
+        "arowsbg": false,
+        "arowsshift": false,
+        "arowsshiftside": "bnslider-arrows--pullright",
+        "autoplay_speed": "5000",
+        "slideshow_height": "lg",
+        "keep_scale": false,
+        "keep_scale_width": "1920",
+        "keep_scale_height": "768",
+        "keep_scale_mwidth": "768",
+        "keep_scale_mheight": "768",
+        "snow": false,
+        "right_column": false,
+        "column": "right",
+        "bnr_source": "admin",
+        "html": ""
+      }
+    },
+    "1655715863df986d98": {
+      "type": "carousel-for-christmas-page",
+      "settings": {
+        "outer_margin": "mt-6",
+        "title": "CYBER MONDAY BEST SELLERS",
+        "font_size": 20,
+        "title_fontweight": "400",
+        "button_bg": "#ffffff",
+        "button_text_color": "#000000",
+        "button_border_color": "#000000",
+        "collection": "black-friday-cyber-monday",
+        "limit": "8",
+        "show_view_all": true,
+        "show_grid_mobile": false,
+        "tabs": false,
+        "tags": "popular, sale, new",
+        "per_row_desktop": "8"
+      }
+    },
+    "1655715932bb2cb8b8": {
+      "type": "christmas-new-images",
+      "blocks": {
+        "16557159325f79f302-0": {
+          "type": "worker",
+          "settings": {
+            "enable": true,
+            "link": "https:\/\/www.perfumedirect.com\/collections\/black-friday-cyber-monday\/womens-perfume",
+            "image": "shopify:\/\/shop_images\/BFCM_gifts_for_her.png",
+            "title": "GIFTS FOR HER"
+          }
+        },
+        "16557159325f79f302-1": {
+          "type": "worker",
+          "settings": {
+            "enable": true,
+            "link": "https:\/\/www.perfumedirect.com\/collections\/black-friday-cyber-monday\/mens-aftershave",
+            "image": "shopify:\/\/shop_images\/BFCM_gifts_for_him.png",
+            "title": "GIFTS FOR HIM"
+          }
+        },
+        "abe72631-4773-4d15-af62-22181ba10133": {
+          "type": "worker",
+          "settings": {
+            "enable": true,
+            "link": "https:\/\/www.perfumedirect.com\/collections\/black-friday-cyber-monday\/50-100",
+            "image": "shopify:\/\/shop_images\/BFCM_luxury_gifts.png",
+            "title": "LUXURY GIFTS"
+          }
+        },
+        "92ba6c82-ee0a-431b-a2ae-a233479dfc69": {
+          "type": "worker",
+          "settings": {
+            "enable": true,
+            "link": "https:\/\/www.perfumedirect.com\/collections\/black-friday-cyber-monday\/under-20",
+            "image": "shopify:\/\/shop_images\/BFCM_budget.png",
+            "title": "BUDGET GIFTS"
+          }
+        }
+      },
+      "block_order": [
+        "16557159325f79f302-0",
+        "16557159325f79f302-1",
+        "abe72631-4773-4d15-af62-22181ba10133",
+        "92ba6c82-ee0a-431b-a2ae-a233479dfc69"
+      ],
+      "settings": {
+        "enable": true,
+        "title": ""
+      }
+    },
+    "1655716039bbd51bb3": {
+      "type": "brands-christmas",
+      "blocks": {
+        "1655716039678a7dce-0": {
+          "type": "brand",
+          "settings": {
+            "enable": true,
+            "title": "mont-blanc",
+            "image": "shopify:\/\/shop_images\/montblanc-logo.png",
+            "link": "",
+            "link_target": "_self"
+          }
+        },
+        "1655716039678a7dce-1": {
+          "type": "brand",
+          "settings": {
+            "enable": true,
+            "title": "paco-rabanne",
+            "image": "shopify:\/\/shop_images\/paco-rabanne-xmas.png",
+            "link": "",
+            "link_target": "_self"
+          }
+        },
+        "1655716039678a7dce-2": {
+          "type": "brand",
+          "settings": {
+            "enable": true,
+            "title": "calvin-klein",
+            "image": "shopify:\/\/shop_images\/calvin-klein-logo_3x_29b79b26-f7f2-4677-90fe-90f9f410a14f.png",
+            "link": "",
+            "link_target": "_self"
+          }
+        },
+        "1655716039678a7dce-3": {
+          "type": "brand",
+          "settings": {
+            "enable": true,
+            "title": "thierry-mugler",
+            "image": "shopify:\/\/shop_images\/thierry-mugler-logo-png-1_3x_dfc05fe8-ca4c-44d8-8966-7f22ddf80098.png",
+            "link": "",
+            "link_target": "_self"
+          }
+        }
+      },
+      "block_order": [
+        "1655716039678a7dce-0",
+        "1655716039678a7dce-1",
+        "1655716039678a7dce-2",
+        "1655716039678a7dce-3"
+      ],
+      "settings": {
+        "enable": true,
+        "outer_margin": "mt-0",
+        "image": "shopify:\/\/shop_images\/snow-bg_3x_6d454163-7c84-4dd9-ad19-ef940286a62a.png",
+        "heading": "TOP CYBER MONDAY BRANDS",
+        "link_button_yes": true,
+        "link_button_text": "SHOP ALL BRANDS",
+        "link": "",
+        "link_target": "_self"
+      }
+    },
+    "1655716139e3036fb3": {
+      "type": "christmas-blog-section",
+      "settings": {
+        "outer_margin": "mt-65",
+        "heading": "CYBER MONDAY LATEST",
+        "from_blog_id": "news",
+        "article-tag": "Black Friday",
+        "from_blog_limit": "4"
+      }
+    },
+    "1655716153dbf87c4c": {
+      "type": "landing_bottom_section",
+      "settings": {
+        "bt_bg_image": "shopify:\/\/shop_images\/cyber-bg_e2203bee-aefe-4653-ba65-c620c472c42e.png",
+        "text-title-christmas": "Cyber Monday 2022 Fragrance Deals",
+        "text-title-family": "BebasNeue",
+        "title_colour": "#ff00ff",
+        "font_size": 58,
+        "text-content-christmas": "Cyber Monday perfume and aftershave deals have landed and that’s a chance for you to pick up a bargain just in time for Christmas, or as a treat to yourself. Finding the right Cyber Monday perfume or aftershave has never been easier with our helpful and easy to use fragrance finder, matching your tastes and preferences to the latest scents. With discounts across all our collections, if you don't find something you like why not check out our perfume gift sets or aftershave gift sets.",
+        "textarea_background": "#000000",
+        "textarea_colour": "#ffffff",
+        "textarea_fontweight": "JosefinSans-Thin_Light"
+      }
+    }
+  },
+  "order": [
+    "Hero-slideshow",
+    "1655715863df986d98",
+    "1655715932bb2cb8b8",
+    "1655716039bbd51bb3",
+    "1655716139e3036fb3",
+    "1655716153dbf87c4c"
+  ]
+}

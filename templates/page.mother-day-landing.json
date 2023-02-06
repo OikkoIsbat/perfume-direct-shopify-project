@@ -1,0 +1,267 @@
+{
+  "wrapper": "div#mother-landing.custom-landing",
+  "sections": {
+    "Hero-slideshow": {
+      "type": "slideshow-christmas",
+      "blocks": {
+        "be49eb3b-90f0-46a2-97bb-288980365f5b": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/72C7A286-199B-4B0D-95AF-301F6DF8326B.png",
+            "image_mobile": "shopify:\/\/shop_images\/B3942594-2D5B-4271-9A06-3EADFC4BDBB2.png",
+            "enable": true,
+            "bg_v_alignment": "bg-middle",
+            "link_button_yes": false,
+            "link_all_slide": false,
+            "link_button_text": "Shop now",
+            "link_button_small": false,
+            "btn_hor_aligment": "left",
+            "button_text_color": "#ffffff",
+            "button_bgcolor": "#ff358b",
+            "button_othercss": "",
+            "captions_half": false,
+            "captions_border": "no-border",
+            "captions_h_alignment": "txt-left",
+            "captions_v_alignment": "txt-middle",
+            "caption_1_yes": true,
+            "caption_1_hidemobile_yes": false,
+            "caption_1": "<h1 class=\"landing-slider-h1\">Mother’s Day<\/h1>",
+            "caption_1_color": "#000000",
+            "caption_1_hor_alignment": "global",
+            "caption_1_bgcolor": "",
+            "caption_1_fontweight": "400",
+            "caption_1_fontsize": "lg",
+            "caption_1_lineheight": "1.00",
+            "caption_1_othercss": "",
+            "caption_2_yes": false,
+            "caption_2_hidemobile_yes": false,
+            "caption_2": "",
+            "caption_2_hor_alignment": "global",
+            "caption_2_color": "#ffffff",
+            "caption_2_bgcolor": "",
+            "caption_2_fontweight": "400",
+            "caption_2_fontsize": "xs",
+            "caption_2_lineheight": "1.00",
+            "caption_2_othercss": "font-size: 74px;\nfont-family:Festive;",
+            "caption_3_yes": true,
+            "caption_3_hidemobile_yes": false,
+            "caption_3": "<p class=\"christmas-slider-p\">AT PERFUME DIRECT<\/p>",
+            "caption_3_hor_alignment": "global",
+            "caption_3_color": "#000000",
+            "caption_3_bgcolor": "",
+            "caption_3_fontweight": "400",
+            "caption_3_fontsize": "sm",
+            "caption_3_lineheight": "1.00",
+            "caption_3_othercss": "font-size: 20px;\nmargin:0px;",
+            "caption_num_yes": false,
+            "caption_num_hidemobile_yes": true,
+            "caption_num_hor_alignment": "left",
+            "caption_num1": "01",
+            "caption_num1_color": "#000000",
+            "caption_num1_fontweight": "900",
+            "caption_num1_othercss": "",
+            "caption_num2": "NEW AWESOME<br>COLLECTION",
+            "caption_num2_color": "#868686",
+            "caption_num2_fontweight": "400",
+            "caption_num2_fontsize": "xxs",
+            "caption_num2_lineheight": "1.64",
+            "caption_num2_othercss": ""
+          }
+        }
+      },
+      "block_order": [
+        "be49eb3b-90f0-46a2-97bb-288980365f5b"
+      ],
+      "settings": {
+        "block_width": "fullwidth",
+        "outer_margin": "mt-0",
+        "show_under_header": false,
+        "autoplay": true,
+        "dots": false,
+        "dotspos": false,
+        "dotsposide": "vert-dots--right",
+        "dotsfullwidth": false,
+        "arrows": false,
+        "arowsdark": false,
+        "arowsbg": false,
+        "arowsshift": false,
+        "arowsshiftside": "bnslider-arrows--pullright",
+        "autoplay_speed": "5000",
+        "slideshow_height": "lg",
+        "keep_scale": true,
+        "keep_scale_width": "1920",
+        "keep_scale_height": "568",
+        "keep_scale_mwidth": "768",
+        "keep_scale_mheight": "768",
+        "snow": false,
+        "right_column": false,
+        "column": "right",
+        "bnr_source": "admin",
+        "html": ""
+      }
+    },
+    "1655383639e54c294c": {
+      "type": "carousel-for-christmas-page",
+      "settings": {
+        "outer_margin": "mt-6",
+        "title": "MOTHER’S DAY BEST SELLERS",
+        "font_size": 20,
+        "title_fontweight": "400",
+        "button_bg": "#ffffff",
+        "button_text_color": "#000000",
+        "button_border_color": "#000000",
+        "collection": "christmas-bestsellers",
+        "limit": "8",
+        "show_view_all": true,
+        "show_grid_mobile": false,
+        "tabs": false,
+        "tags": "popular, sale, new",
+        "per_row_desktop": "8"
+      }
+    },
+    "16553706380d65d93f": {
+      "type": "valentine-new-images",
+      "blocks": {
+        "16553706382a3a71a7-0": {
+          "type": "worker",
+          "settings": {
+            "enable": true,
+            "link": "",
+            "image": "shopify:\/\/shop_images\/32DC59E4-DBB1-452F-B0CB-C03A65F15033-optimized.png",
+            "title": "GIFTS FOR HER"
+          }
+        },
+        "16553706382a3a71a7-1": {
+          "type": "worker",
+          "settings": {
+            "enable": true,
+            "link": "",
+            "image": "shopify:\/\/shop_images\/AFAC76B6-7E9B-4DC1-AFDD-59A1A0D03E9B.png",
+            "title": "CATEGORY 2"
+          }
+        },
+        "59fa179d-955e-476d-aa2b-b7ddbb003973": {
+          "type": "worker",
+          "settings": {
+            "enable": true,
+            "link": "",
+            "image": "shopify:\/\/shop_images\/B353015B-47CA-4B30-9DAD-1309F924A4B9.png",
+            "title": "LUXURY MOTHER’S DAY GIFTS"
+          }
+        },
+        "2d5dcbd7-46a9-4e19-89ec-72c8203604a2": {
+          "type": "worker",
+          "settings": {
+            "enable": true,
+            "link": "",
+            "image": "shopify:\/\/shop_images\/BDD2CE46-DC84-4DB1-8EB8-F0F6E9886610.png",
+            "title": "BUDGET MOTHER’S DAY GIFTS"
+          }
+        }
+      },
+      "block_order": [
+        "16553706382a3a71a7-0",
+        "16553706382a3a71a7-1",
+        "59fa179d-955e-476d-aa2b-b7ddbb003973",
+        "2d5dcbd7-46a9-4e19-89ec-72c8203604a2"
+      ],
+      "settings": {
+        "enable": true,
+        "title": ""
+      }
+    },
+    "165537100050c17104": {
+      "type": "brands-christmas",
+      "blocks": {
+        "16553710007f63902e-0": {
+          "type": "brand",
+          "settings": {
+            "enable": true,
+            "title": "Bigsteps",
+            "image": "shopify:\/\/shop_images\/CB0565B7-1E80-411F-95FD-5C8A98C5C527.png",
+            "link": "",
+            "link_target": "_self"
+          }
+        },
+        "16553710007f63902e-1": {
+          "type": "brand",
+          "settings": {
+            "enable": true,
+            "title": "Bigsteps",
+            "image": "shopify:\/\/shop_images\/9BFBFB20-2CF4-477B-B611-CA483D728ACE.png",
+            "link": "",
+            "link_target": "_self"
+          }
+        },
+        "16553710007f63902e-2": {
+          "type": "brand",
+          "settings": {
+            "enable": true,
+            "title": "Bigsteps",
+            "image": "shopify:\/\/shop_images\/34499556-3AA1-4F7D-8FC3-465697AEB3B7.png",
+            "link": "",
+            "link_target": "_self"
+          }
+        },
+        "16553710007f63902e-3": {
+          "type": "brand",
+          "settings": {
+            "enable": true,
+            "title": "Bigsteps",
+            "image": "shopify:\/\/shop_images\/Gucci_2x_ea116340-3731-466a-86d6-ac76f3d48098.png",
+            "link": "",
+            "link_target": "_self"
+          }
+        }
+      },
+      "block_order": [
+        "16553710007f63902e-0",
+        "16553710007f63902e-1",
+        "16553710007f63902e-2",
+        "16553710007f63902e-3"
+      ],
+      "settings": {
+        "enable": true,
+        "outer_margin": "mt-0",
+        "image": "shopify:\/\/shop_images\/9F381E13-B16A-4F9C-B2A7-EE2EA6B9E3E4.png",
+        "heading": "TOP MOTHER’S DAY BRANDS",
+        "link_button_yes": true,
+        "link_button_text": "Shop all brands",
+        "link": "",
+        "link_target": "_self"
+      }
+    },
+    "1656937571de17d565": {
+      "type": "christmas-blog-section",
+      "settings": {
+        "outer_margin": "mt-65",
+        "heading": "MOTHER’S DAY LATEST",
+        "from_blog_id": "news",
+        "article-tag": "Mother's Day",
+        "from_blog_limit": "4"
+      }
+    },
+    "1655381106105a69c9": {
+      "type": "landing_bottom_section",
+      "settings": {
+        "bt_bg_image": "shopify:\/\/shop_images\/FBA5A407-7253-4F34-9E7B-33F89A618A86-optimized.png",
+        "text-title-christmas": "Mother’s Day Shop",
+        "text-title-family": "DancingScript",
+        "title_colour": "#000000",
+        "font_size": 58,
+        "text-content-christmas": "Perfume for Mother’s Day makes the perfect gift. A new scent or a fresh bottle of her favourite, is a gift that she can use time and time again. With Mother’s Day perfume deals, you can find something conveniently priced, and with our scent finder, a fragrance she’ll love. Our wide range of women’s perfume and women’s luxury perfume has something for everyone.",
+        "textarea_background": "#d5f2e8",
+        "textarea_colour": "#000000",
+        "textarea_fontweight": "300"
+      }
+    }
+  },
+  "order": [
+    "Hero-slideshow",
+    "1655383639e54c294c",
+    "16553706380d65d93f",
+    "165537100050c17104",
+    "1656937571de17d565",
+    "1655381106105a69c9"
+  ]
+}

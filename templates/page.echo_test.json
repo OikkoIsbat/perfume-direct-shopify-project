@@ -1,0 +1,111 @@
+{
+  "sections": {
+    "1644492253a4b86ec6": {
+      "type": "buy-now-pay-later",
+      "blocks": {
+        "6d6a5e4c-0779-4e61-82d0-91a88999de52": {
+          "type": "pay_later_images",
+          "settings": {
+            "pay_icon_image": "shopify:\/\/shop_images\/apple-pay_3x_73fe190d-dba5-4dd9-b734-141a7771c0ac.png"
+          }
+        },
+        "3fb286d8-b0e2-4809-a282-224f60f68f48": {
+          "type": "pay_later_images",
+          "settings": {
+            "pay_icon_image": "shopify:\/\/shop_images\/google-pay_3x_d947586b-2b9a-4f70-8a8a-dcfb55b6122e.png"
+          }
+        },
+        "f5538f76-f984-4786-9498-bad39a8a8a81": {
+          "type": "pay_later_images",
+          "settings": {
+            "pay_icon_image": "shopify:\/\/shop_images\/visa_3x_e448467b-9656-400a-aa9a-468a67218f35.png"
+          }
+        },
+        "bb31b9ca-155b-4510-bb12-c319234e2f30": {
+          "type": "pay_later_images",
+          "settings": {
+            "pay_icon_image": "shopify:\/\/shop_images\/mastercard_3x_4b2ffc8c-85b4-45ac-8c68-df73dcc1992b.png"
+          }
+        },
+        "83e901ce-2050-46e1-a2e2-9e56c708eb46": {
+          "type": "pay_later_images",
+          "settings": {
+            "pay_icon_image": "shopify:\/\/shop_images\/maestro_3x_eb7e7f9d-adfa-43d7-bb7e-854be125140d.png"
+          }
+        },
+        "b587d146-379f-4a86-8131-582f78626fd5": {
+          "type": "pay_later_images",
+          "settings": {
+            "pay_icon_image": "shopify:\/\/shop_images\/paypal_3x_428706fd-8eaf-4dd0-903d-53a1cb358fb9.png"
+          }
+        },
+        "8080b78a-6e42-42f0-bed3-eca34c0047b9": {
+          "type": "pay_later_images",
+          "settings": {
+            "pay_icon_image": "shopify:\/\/shop_images\/klarna_3x_0bb83617-2343-4ce2-b5e7-b83b208b7458.png"
+          }
+        },
+        "c460592d-86cd-4f80-a357-0094b8b2bd3e": {
+          "type": "pay_later_images",
+          "settings": {
+            "pay_icon_image": "shopify:\/\/shop_images\/amazon-pay_3x_b491a0fb-1f07-4cef-b558-d41e8b327242.png"
+          }
+        },
+        "3c8f323c-0c5f-4056-a23f-65ab0a9b0329": {
+          "type": "pay_later_images",
+          "settings": {
+            "pay_icon_image": "shopify:\/\/shop_images\/clear-pay_3x_a5a23d02-e4aa-4249-8495-7b6a4d1970ba.png"
+          }
+        },
+        "9c320d99-9945-409f-bf60-4cc14b4fa2fb": {
+          "type": "pay_later_images",
+          "settings": {
+            "pay_icon_image": "shopify:\/\/shop_images\/lay-buy_3x_cd642570-c812-4c97-b460-56330e2652b0.png"
+          }
+        },
+        "534f1d7d-59f6-4797-99c9-c4b170e70b4b": {
+          "type": "pay_later_images",
+          "settings": {
+            "pay_icon_image": "shopify:\/\/shop_images\/amex_3x_4f2716ea-43aa-41d6-935c-0ec3e6a7a6f8.png"
+          }
+        },
+        "69a058c8-f82f-49da-a5b6-20e166b9f73b": {
+          "type": "pay_later_images",
+          "settings": {
+            "pay_icon_image": "shopify:\/\/shop_images\/zip-pay_3x_be033268-f222-462d-971d-405213ace29f.png"
+          }
+        },
+        "c37cf877-fc2e-4071-908f-a048aac9c3fc": {
+          "type": "pay_later_images",
+          "settings": {
+            "pay_icon_image": "shopify:\/\/shop_images\/shop-pay_3x_13570bed-e0e7-48bc-a8a4-4223020026bd.png"
+          }
+        }
+      },
+      "block_order": [
+        "6d6a5e4c-0779-4e61-82d0-91a88999de52",
+        "3fb286d8-b0e2-4809-a282-224f60f68f48",
+        "f5538f76-f984-4786-9498-bad39a8a8a81",
+        "bb31b9ca-155b-4510-bb12-c319234e2f30",
+        "83e901ce-2050-46e1-a2e2-9e56c708eb46",
+        "b587d146-379f-4a86-8131-582f78626fd5",
+        "8080b78a-6e42-42f0-bed3-eca34c0047b9",
+        "c460592d-86cd-4f80-a357-0094b8b2bd3e",
+        "3c8f323c-0c5f-4056-a23f-65ab0a9b0329",
+        "9c320d99-9945-409f-bf60-4cc14b4fa2fb",
+        "534f1d7d-59f6-4797-99c9-c4b170e70b4b",
+        "69a058c8-f82f-49da-a5b6-20e166b9f73b",
+        "c37cf877-fc2e-4071-908f-a048aac9c3fc"
+      ],
+      "settings": {
+        "buy_now_text": "WE OFFER THE FOLLOWING PAYMENT METHODS",
+        "outer_margin": "mt-65",
+        "show_under_header": false,
+        "bg": ""
+      }
+    }
+  },
+  "order": [
+    "1644492253a4b86ec6"
+  ]
+}

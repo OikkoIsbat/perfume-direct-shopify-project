@@ -1,0 +1,54 @@
+<body id = "prodpg1">
+{% section 'product-section' %}
+
+
+  <div class="elfsight-sapp-8f68a02d-2588-4f7b-bb13-a4ce279faba3" style="display: flex; justify-content: center;"></div>
+  
+    <script>
+      let pdpInstallment=function(){
+      document.querySelector('.fixsizeformobile #fixlistmobile') && $('.fixsizeformobile #fixlistmobile').on('click',function(e){
+       let money=$(this).find('.money').text().match(/[+-]?\d+(\.\d+)?/)[0];
+          // clear Pay dom manipulation
+        if(document.querySelector('.clearpay-paragraph')){
+        let clearMonth=$('.clearpay-text1').text().match(/\d+/)[0];
+        let clearInsallment=(money/clearMonth).toFixed(2);
+        let clearAmount=$('.clearpay-instalments').text(`£${clearInsallment} GBP`);
+        }
+            // lay buy dom manipulation
+        if(document.querySelector('.laybuy-paragraph')){
+        let laybuyMonth=$('.laybuy-text1').text().match(/\d+/)[0];
+        let laybuyInsallment=(money/laybuyMonth).toFixed(2);
+        let laybuyrAmount=$('.laybuy-money').text(`£${laybuyInsallment}`);
+        }
+          // Zip  buy dom manipulation
+        if(document.querySelector('#partPayCalculatorWidgetTextFromCopy')){
+        let zipMonth=$('#partPayCalculatorWidgetTextFromCopy').text().match(/\d+/)[0];
+        let zipInsallment=(money/zipMonth).toFixed(2);
+        let zipAmount=$('#partPayCalculatorWidgetTextFromCopy span').text(`£${zipInsallment}`);
+       }
+              //now on sale
+     let quickPrice=e.currentTarget.querySelector('.money').textContent.trim().substring(1);
+     if(quickPrice>50){
+        document.querySelector('.free-shipping-uinque').classList.add('priceShow') ;
+      }else{
+        document.querySelector('.free-shipping-uinque').classList.remove('priceShow') ;
+      }
+      //saving amt
+      setTimeout(()=>{
+          let savPrice=document.querySelector('.prd-block_price--old .money');
+        if(savPrice){
+          document.querySelector('.unique-saving').classList.add('priceShow'); 
+        }else{
+          document.querySelector('.unique-saving').classList.remove('priceShow') ;
+        }
+      },25);
+    });
+
+
+    };
+    document.querySelector('.page-product') && pdpInstallment()
+      
+
+</script>
+
+</body>
