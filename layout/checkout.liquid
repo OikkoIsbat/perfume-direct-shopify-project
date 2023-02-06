@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}" dir="{{ direction }}" class="{{ checkout_html_classes }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
+    <meta name="referrer" content="origin">
+
+    <title>{{ page_title }}</title>
+
+    {{ content_for_header }}
+
+    {{ checkout_stylesheets }}
+    {{ checkout_scripts }}
+    
+    <script>
+(function (i, s, o, g, r, a, m) {
+i['RevLifterObject'] = r;
+i[r] = i[r] || function () {
+(i[r].q = i[r].q || []).push(arguments)
+}, i[r].l = 1 * new Date();
+a = s.createElement(o),
+m = s.getElementsByTagName(o)[0];
+a.async = 1;
+a.src = g;
+m.parentNode.insertBefore(a, m)
+})(window, document, 'script', 'https://assets.revlifter.io/03f3d9b2-a1a9-4c2a-9c2d-eed9396c2219.js', 'revlifter');
+revlifter('load', '03f3d9b2-a1a9-4c2a-9c2d-eed9396c2219');
+</script>
+
+      <style>
+      .step__sections > div:first-child > div {
+        border-color: white;
+      }
+      .input-radio:checked {
+        border-width: 4px;
+        background: #798c9c;
+      }
+      .input-checkbox:checked,
+      .input-radio:checked {
+        border-color: #e6e6e6;
+      }
+      .input-checkbox:checked:hover,
+      .input-radio:checked:hover {
+        border-color: #e6e6e6;
+      }
+      .content-box__row--secondary {
+        background-color: #ececec;
+      }
+      .js .sidebar .btn--disabled {
+        background: #000;
+      }
+      .floating-labels .field--show-floating-label .field__label {
+        opacity: 0;
+      }
+      .floating-labels .field--show-floating-label .field__input {
+        padding-top: 0.5em;
+      }
+      .check_area .field__input,
+      .check_area select {
+        height: 48px !important;
+        border-radius: 0 !important;
+        border-color: #c6c6c6 !important;
+        font-weight: 600;
+      }
+      .check_area .field__input::placeholder,
+      .content-box input::placeholder,
+      .check_area select::placeholder {
+/*         color: #a1a1a1 !important; */
+        color: #fff !important;
+        font-weight: 400 !important;
+        text-transform: uppercase;
+      }
+      #continue_button {
+        border-radius: 0;
+        text-transform: uppercase;
+        height: 48px;
+        padding: 0 20px;
+      }
+      #checkout_reduction_code {
+        height: 48px;
+        border-radius: 0;
+        border-color: #c6c6c6;
+        font-weight: 600;
+        padding-bottom: 12px;
+      }
+      #checkout_reduction_code::placeholder {
+        color: #a1a1a1 !important;
+        font-weight: 400 !important;
+        text-transform: uppercase;
+      }
+      #checkout_submit {
+        border-radius: 0;
+        text-transform: uppercase;
+      }
+      .total-line__name {
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 14px;
+      }
+      .total-line__price .order-summary__small-text {
+        text-transform: uppercase;
+        color: #000;
+        font-size: 10px;
+      }
+      .total-line__price .payment-due__price {
+        font-size: 14px !important;
+      }
+      .total-line__price .payment-due__currency {
+        display: none;
+      }
+      .total-line--shipping .total-line__name {
+        padding-top: 18px !important;
+      }
+      .total-line--shipping .skeleton-while-loading {
+        padding-top: 7px;
+        display: block;
+      }
+      .total-line--shipping {
+        border-top: 1px solid rgba(179, 179, 179, 0.34);
+      }
+      .total-line--subtotal .total-line__name {
+        padding-bottom: 18px;
+      }
+      .total-line--subtotal .order-summary__emphasis {
+        padding-bottom: 12px;
+        display: block;
+      }
+      .product-thumbnail__quantity {
+        background: #000 !important;
+      }
+      .step__sections {
+        text-transform: uppercase;
+      }
+      .review-block__link span,
+      .section--contact-information a {
+        text-decoration: underline !important;
+        color: #75939e !important;
+        font-weight: 500 !important;
+      }
+      .breadcrumb {
+        text-transform: uppercase;
+      }
+
+      @media screen and (max-width: 999px) {
+
+        .order-summary-toggle__text span {
+          text-transform: uppercase;
+          font-family: Josefin Sans, sans-serif;
+          padding-right: 8px;
+        }
+        .total-recap span {
+          font-size: 14px !important;
+        }
+        .sidebar .order-summary__emphasis {
+          text-transform: uppercase;
+          font-weight: 300;
+          line-height: 1.67;
+          font-family: Josefin Sans, sans-serif;
+          font-size: 12px;
+        }
+        .skeleton-while-loading {
+          font-weight: 600 !important;
+        }
+        .order-summary-toggle {
+          background: transparent !important;
+          border-bottom: 0 !important;
+        }
+      }
+       
+    </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  <body>
+    {{ skip_to_content_link }}
+
+    <header class="banner" data-header role="banner">
+      <div class="wrap">
+        {{ content_for_logo }}
+      </div>
+    </header>
+
+    {{ order_summary_toggle }}
+    <div class="content" data-content>
+      <div class="wrap">
+        <div class="main check_area">
+          <header class="main__header" role="banner">
+            {{ content_for_logo }}
+            {{ breadcrumb }}
+            {% comment %}
+              The Vaan Group - Order Bump (1/2)
+            {% endcomment %}
+            <div id="superbump"></div>
+            {% comment %}
+              END OF The Vaan Group - Order Bump (1/2)
+            {% endcomment %}
+            {{ alternative_payment_methods }}
+          </header>
+          <main class="main__content" role="main">
+            {{ content_for_layout }}
+          </main>
+          <footer class="main__footer" role="contentinfo">
+            {{ content_for_footer }}
+          </footer>
+        </div>
+        <aside class="sidebar" role="complementary">
+          <div class="sidebar__header">
+            {{ content_for_logo }}
+          </div>
+          <div class="sidebar__content">
+            {{ content_for_order_summary }}
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    {{ tracking_code }}
+
+    {% comment %}
+      The Vaan Group - Order Bump (2/2)
+    {% endcomment %}
+    <script src="/apps/superbump/superbump_widget.js"></script>
+    {% comment %}
+      END OF The Vaan Group - Order Bump (2/2)
+    {% endcomment %}
+
+    <script src="https://cdn-widgetsrepository.yotpo.com/v1/loader/rGVB2qMy5luovkFN7YuE0g" async></script>
+
+<div class="yotpo-widget-instance" data-yotpo-instance-id="161757"></div>
+  </body>
+</html>
+
+<script>
+  let slash = `<p class="breadcrump-separator">/</p>`
+
+  document.querySelectorAll('.breadcrumb > li')[0].insertAdjacentHTML('afterend', slash);
+  document.querySelectorAll('.breadcrumb > li')[1].insertAdjacentHTML('afterend', slash);
+  document.querySelectorAll('.breadcrumb > li')[2].insertAdjacentHTML('afterend', slash);
+  document.querySelectorAll('.breadcrumb > li')[3].insertAdjacentHTML('afterend', slash);
+
+  function pollForIcon1() {
+    if (document.querySelectorAll('.breadcrumb > li').length > 3) {
+      const iconRef = document.querySelector('.order-summary-toggle__icon-wrapper');
+      let newBagIcon = `<svg class="new-bag-icon" xmlns="http://www.w3.org/2000/svg" width="22px" height="22px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M5 22h14a2 2 0 0 0 2-2V9a1 1 0 0 0-1-1h-3v-.777c0-2.609-1.903-4.945-4.5-5.198A5.005 5.005 0 0 0 7 7v1H4a1 1 0 0 0-1 1v11a2 2 0 0 0 2 2zm12-12v2h-2v-2h2zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v1H9V7zm-2 3h2v2H7v-2z"/></svg>`;
+      iconRef.insertAdjacentHTML("afterend", newBagIcon);
+    } else {
+      setTimeout(pollForIcon1, 25);
+    }
+  };
+  pollForIcon1();
+
+
+
+  function pollForButton1() {
+    if (document.querySelector('.superbump-action')) {
+      document.querySelector('.superbump-action').innerText = 'ADD TO BASKET';
+      document.querySelector('.superbump-action').style.minWidth = '105px';
+      document.querySelector('.superbump-action').style.textAlign = 'center';
+      document.querySelector('.superbump-action').style.border = '2px solid #3e3b3b';
+      document.querySelector('.superbump-action').style.marginLeft = '23px';
+      document.querySelector('.superbump-price').style.marginRight = '29px';
+      var isMobile = {
+        Android: function() {
+          return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+          return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+          return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+          return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+          return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+        },
+        any: function() {
+          return(isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+      };
+      if (isMobile.any()) 
+        document.querySelector('.superbump-action').innerText = 'ADD TO ORDER';
+      
+      // ............
+      let desktop_price_without_compare = document.querySelectorAll(
+      "#app .superbump-app .superbump-action-container .superbump-price.superbump-price-desktop_none span"
+      );
+
+      if (desktop_price_without_compare.length === 1) {
+        desktop_price_without_compare[0].style.marginRight = "60px";
+      }
+
+      let superbump_title_truncate_mobile = document.querySelector(
+        "#app .superbump-app .superbump-title"
+      );
+      const storeText = superbump_title_truncate_mobile.innerText;
+      
+      window.addEventListener("resize", () => trancateTextMobile());
+      let execute1 = true;
+      let execute2 = true;
+      let execute3 = true;
+      let truncateText1 = "";
+      let truncateText2 = "";
+      function trancateTextMobile() {
+        if (screen.width < 341) {
+          if (execute2 === true) {
+            if(storeText.length > 55){
+                 truncateText2 = storeText.slice(0, 55) + "...";
+                 superbump_title_truncate_mobile.innerText = truncateText2;
+             }
+          }
+      
+          execute2 = false;
+          execute3 = true;
+          execute1 = true;
+        } else if (screen.width > 340 && screen.width < 402) {
+        if (execute1 === true){
+            if(storeText.length > 75){
+                truncateText1 = storeText.slice(0, 75) + "...";
+                superbump_title_truncate_mobile.innerText = truncateText1;
+
+            }
+            else{
+                superbump_title_truncate_mobile.innerText = storeText;
+            }
+        }  
+    
+          execute1 = false;
+          execute2 = true;
+          execute3 = true;
+        } else {
+          execute1 = true;
+          execute2 = true;
+          if (execute3 === true) {
+            superbump_title_truncate_mobile.innerText = storeText;
+          }
+          execute3 = false;
+        }
+      }
+      
+      if (screen.width < 341) {
+        if(storeText.length > 55){
+             truncateText2 = storeText.slice(0, 55) + "...";
+             superbump_title_truncate_mobile.innerText = truncateText2;
+         }
+
+      } else if (screen.width > 340 && screen.width < 402) {
+         if(storeText.length > 75){
+             truncateText1 = storeText.slice(0, 75) + "...";
+             superbump_title_truncate_mobile.innerText = truncateText1;
+
+         }
+
+      }
+      // ...................
+
+      
+
+    } else {
+      setTimeout(pollForButton1, 25);
+    }
+  };
+  pollForButton1();
+
+// right column products
+function rightColumnUpdate(){
+  if(!document.querySelector('.order-summary__section__content tbody tr .order-qty')){
+    document.querySelectorAll('.order-summary__section__content tbody tr').forEach((item) => {
+      let itemQuantity = item.querySelector('.product__quantity').textContent.trim();
+      item.querySelector('.product__description__variant').insertAdjacentHTML("afterend", `<span class="order-qty"> QTY   ${itemQuantity}</span>`)
+      let variant = item.querySelector('.product__description__variant').textContent.trim();
+      item.querySelector('.product__description__variant').textContent = "SIZE " + variant
+    });
+  }
+};
+
+rightColumnUpdate();
+
+  function giftCard(){
+    if(!document.querySelector(".order-summary__sections .order-summary__section--discount .custom-gift-card")){
+      const h11 = document.querySelector(".order-summary__sections .order-summary__section--discount");
+      let html11 = `
+      <div class="custom-gift-card">
+        <hr/>
+        <p>GIFT CARD OR DISCOUNT CODE</p>
+        <hr/>
+      </div>
+      `;
+      h11.insertAdjacentHTML("afterbegin", html11);
+    }
+  };
+  giftCard();
+
+  // const hrRef = document.querySelector(".order-summary__section--total-lines");
+  // let hr1 = `<hr class="bottom-line-total" />`;
+  // hrRef.insertAdjacentHTML("afterend", hr1);
+
+
+    var targetM = document.querySelector('.sidebar__content');
+    var targetIframe = document.querySelector('iframe');
+    var observerM = new MutationObserver(function(mutationsM) {
+     mutationsM.forEach(function() {
+        console.log('yse updated');
+        if(!document.querySelector('.transaction-text-container')){
+          console.log("DOM updated");
+          rightColumnUpdate();
+          giftCard();
+          contactInfoUpdate();
+          paymentUpdate();
+        }
+        
+                  document
+      .querySelectorAll('.field__input-btn-wrapper > button > span')
+      .forEach((item) => {
+        item.innerText = "Add";
+      });
+              document.querySelectorAll('iframe input')
+  .forEach((item) => {
+    item.classList.add = "hide_placeholder";
+  });
+      })
+  });
+  var configM = {  childList: true, subtree: false,  characterData: true };
+  observerM.observe(targetM, configM);
+    observerM.observe(targetIframe, configM);
+  document.querySelectorAll('.field__input-btn-wrapper > button > span')
+  .forEach((item) => {
+    item.innerText = "Add";
+  });
+  document.querySelectorAll('iframe input')
+  .forEach((item) => {
+    item.classList.add = "hide_placeholder";
+  });
+  
+
+
+  function contactInfoUpdate(){
+    if (window.Shopify.Checkout.step == 'contact_information') {
+      function pollForContact() {
+        console.log("poll function");
+        if (document.querySelectorAll('.breadcrumb > li').length > 3) {
+
+
+          console.log("yo!");
+          const menuItems = document.querySelectorAll('.breadcrumb > li');
+          for (let i = 0; i < menuItems.length; i++) {
+            if (menuItems[i].classList.contains('breadcrumb__item--current')) {
+              console.log(menuItems[i].innerText);
+              if ((menuItems[i].innerText.replace(/\s/g, '') == 'INFORMATION') && (!document.querySelector(".section--contact-information .email-custom"))) {
+                console.log("contact-info");
+                let NewDownIcon = '<svg class="new-down-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" d="M831.872 340.864L512 652.672L192.128 340.864a30.592 30.592 0 0 0-42.752 0a29.12 29.12 0 0 0 0 41.6L489.664 714.24a32 32 0 0 0 44.672 0l340.288-331.712a29.12 29.12 0 0 0 0-41.728a30.592 30.592 0 0 0-42.752 0z"/></svg>';
+                const refDownIcon = document.querySelector('.field__caret');
+                refDownIcon.insertAdjacentHTML("beforeend",NewDownIcon);
+                console.log("updated icon");
+                document.querySelector('.total-line-table .total-line-table__tbody .total-line--shipping .total-line__price > span').innerText = 'CALCULATED AT NEXT STEP';
+                const h2 = document.querySelector(".section--contact-information .section__header");
+                let html = "<p class='email-custom'>Email</p>";
+                h2.insertAdjacentHTML("afterend", html);
+                const h3 = document.querySelector(".section--shipping-address .section__header");
+                let html3 = "<p>Country/Region</p>";
+                h3.insertAdjacentHTML("afterend", html3);
+                const h4 = document.querySelector("[data-address-field=first_name]");
+        
+                let html4 = "<p>First Name</p>";
+                h4.insertAdjacentHTML("afterbegin", html4);
+                const h5 = document.querySelector("[data-address-field=last_name]");
+                let html5 = "<p>Last Name</p>";
+                h5.insertAdjacentHTML("afterbegin", html5);
+                const h6 = document.querySelector("[data-address-field=address1]");
+                let html6 = "<p>Address</p>";
+                h6.insertAdjacentHTML("afterbegin", html6);
+                const h7 = document.querySelector("[data-address-field=address2]");
+                let html7 = "<p>Apartment,Suite,ETC.(Optional)</p>";
+                h7.insertAdjacentHTML("afterbegin", html7);
+                const h8 = document.querySelector("[data-address-field=city]");
+                let html8 = "<p>City</p>";
+                h8.insertAdjacentHTML("afterbegin", html8);
+                const h9 = document.querySelector("[data-address-field=zip]");
+                let html9 = "<p>Postcode</p>";
+                h9.insertAdjacentHTML("afterbegin", html9);
+                const h10 = document.querySelector("[data-address-field=phone]");
+                let html10 = "<p>Phone Number For Exclusive Offers And Updates</p>";
+                h10.insertAdjacentHTML("afterbegin", html10);
+              }
+            } else {
+              continue;
+            }
+          };
+        } else {
+          console.log("no");
+          setTimeout(pollForContact, 25);
+        }
+      };
+      pollForContact();
+    }
+  };
+
+  contactInfoUpdate();
+      
+      function paymentUpdate(){
+        if (window.Shopify.Checkout.step == 'payment_method') {
+          function pollFortestPDP27() {
+            
+            console.log("poll function");
+            if (document.querySelectorAll('.breadcrumb > li').length > 3) {
+              // add custom class to parent element based on selected payment method
+              $(".radio-wrapper input[type='radio'][name='checkout[payment_gateway]']").on("change",function(){
+                  let parent_div = $(this).parent().parent().addClass('selected-payment-method');
+                  $('.radio-wrapper').not(parent_div).removeClass('selected-payment-method');
+              });
+              const selectedPaymentMethod = $(".radio-wrapper input[type='radio'][name='checkout[payment_gateway]']:checked");
+              if(selectedPaymentMethod) {
+                selectedPaymentMethod.parent().parent().addClass('selected-payment-method')
+              }
+              // add custom class to parent element based on selected payment method
+              
+
+              // add custom class to parent element based on selected payment method
+               $(".radio-wrapper input[type='radio'][name='checkout[different_billing_address]']").on("change",function(){
+                 console.log('billing->', $(this).parent().parent().find('label').text())
+                  let parent_div = $(this).parent().parent().addClass('selected-billing-address');
+                  $('.radio-wrapper').not(parent_div).removeClass('selected-billing-address');
+                 if($.trim($(this).parent().parent().find('label').text()) === 'Use a different billing address'){
+                   $(this).parent().parent().addClass('different-billing-address');
+                 }
+              });
+              const selectedDiffBillingAddress = $(".radio-wrapper input[type='radio'][name='checkout[different_billing_address]']:checked");
+              if(selectedDiffBillingAddress) {
+                selectedDiffBillingAddress.parent().parent().addClass('selected-billing-address')
+              }
+
+              // add custom class to parent element based on selected payment method
+
+               const addButtonElem = document.querySelector('.hidden-on-desktop #checkout_submit >span.visually-hidden');
+              addButtonElem.classList.remove("visually-hidden");
+              
+              console.log("yo!");
+              const menuItems = document.querySelectorAll('.breadcrumb > li');
+              for (let i = 0; i < menuItems.length; i++) {
+                if (menuItems[i].classList.contains('breadcrumb__item--current')) {
+                  console.log(menuItems[i].innerText.replace(/\s/g, ''));
+                  if (menuItems[i].innerText.replace(/\s/g, '') == 'PAYMENT' ) {
+                    console.log("payment");
+                    const h13 = document.querySelector(".section--payment-method .section__header");
+                    let html13 = `
+                <div class="payment-text-container">
+                  <hr/>
+                  <p>PAYMENT</p>
+                  <hr/>
+                </div>
+                <div class="transaction-text-container">
+                  <p>ALL TRANSACTIONS ARE SECURE AND ENCRYPTED.</p>
+                </div>
+                `;
+                    h13.insertAdjacentHTML("afterend", html13);
+  
+                    const h15 = document.querySelector('.section--payment-method .section__content fieldset.content-box div.card-fields-container .fieldset .field');
+                    let html15 = `
+                  <p>CARD NUMBER</p>
+    
+                `;
+                    h15.insertAdjacentHTML("afterbegin", html15);
+  
+                    const h16 = document.querySelector('.section--payment-method .section__content fieldset.content-box div.card-fields-container .fieldset div[data-credit-card-name="true"]');
+                    let html16 = `
+                  <p>NAME ON CARD</p>
+                `;
+                    h16.insertAdjacentHTML("afterbegin", html16);
+  
+                    const h17 = document.querySelector('.section--payment-method .section__content fieldset.content-box div.card-fields-container .fieldset div[data-credit-card-expiry="true"]');
+                    let html17 = `
+                  <p>EXPIRATION DATE(MM/YY)</p>
+                `;
+                    h17.insertAdjacentHTML("afterbegin", html17);
+  
+                    const h18 = document.querySelectorAll('.section--payment-method .section__content fieldset.content-box div.card-fields-container .fieldset .field--half')[2];
+                    let html18 = `
+                  <p>SECURITY CODE</p>
+                `;
+                    h18.insertAdjacentHTML("afterbegin", html18);
+  
+                    const h19 = document.querySelector('.section--billing-address');
+                    let html19 = `
+                <div class="payment-text-container">
+                  <hr/>
+                  <p>BILLING ADDRESS</p>
+                  <hr/>
+                </div>
+                <div class="transaction-text-container">
+                  <p>SELECT THE ADDRESS THAT MATCHES YOUR CARD OR PAYMENT METHOD</p>
+                </div>
+                `;
+                    h19.insertAdjacentHTML("afterbegin", html19);
+                    const h20 = document.querySelector('.section--remember-me');
+                    let html20 = `
+                <div class="payment-text-container">
+                  <hr/>
+                  <p>REMEMBER ME</p>
+                  <hr/>
+                </div>
+                `;
+                    h20.insertAdjacentHTML("afterbegin", html20);
+
+                  let NewDownIcon = '<svg class="new-down-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"><path fill="currentColor" d="M831.872 340.864L512 652.672L192.128 340.864a30.592 30.592 0 0 0-42.752 0a29.12 29.12 0 0 0 0 41.6L489.664 714.24a32 32 0 0 0 44.672 0l340.288-331.712a29.12 29.12 0 0 0 0-41.728a30.592 30.592 0 0 0-42.752 0z"/></svg>';
+                  const refDownIcon = document.querySelector('.field__caret');
+                  refDownIcon.insertAdjacentHTML("beforeend",NewDownIcon);  
+
+                  const h21 = document.querySelector('#section--billing-address__different .address-fields');
+                  let html21  = `<p class="billing-country-custom">Country/Region</p>`
+                  h21.insertAdjacentHTML("afterbegin",html21);
+
+                  const h22 = document.querySelector('#section--billing-address__different .address-fields > div[data-address-field="first_name"]');
+                  let html22  = `<p>First Name</p>`
+                  h22.insertAdjacentHTML("afterbegin",html22);
+
+                  const h23 = document.querySelector('#section--billing-address__different .address-fields > div[data-address-field="last_name"]');
+                  let html23  = `<p>Last Name</p>`
+                  h23.insertAdjacentHTML("afterbegin",html23);
+
+                  const h24 = document.querySelector('#section--billing-address__different .address-fields > div[data-address-field="address1"]');
+                  let html24  = `<p>Address</p>`
+                  h24.insertAdjacentHTML("afterbegin",html24);
+
+                  const h25 = document.querySelector('#section--billing-address__different .address-fields > div[data-address-field="address2"]');
+                  let html25  = `<p>Apartment,Suite,Etc(Optional)</p>`
+                  h25.insertAdjacentHTML("afterbegin",html25);
+
+                  const h26 = document.querySelector('#section--billing-address__different .address-fields > div[data-address-field="city"]');
+                  let html26  = `<p>City</p>`
+                  h26.insertAdjacentHTML("afterbegin",html26);
+
+                  const h27 = document.querySelector('#section--billing-address__different .address-fields > div[data-address-field="zip"]');
+                  let html27  = `<p>Postal Code</p>`
+                  h27.insertAdjacentHTML("afterbegin",html27);
+
+
+                  const h27alt = document.querySelector('#section--billing-address__different .address-fields > div[data-address-field="province');  
+                  let html27alt = `<p>Region</p>`;
+                  h27alt.insertAdjacentHTML("afterbegin",html27alt);
+                    
+                  const h28 = document.querySelector('#section--billing-address__different .address-fields > div[data-address-field="phone"]');
+                  let html28  = `<p>Phone Number For Exclusive Offer And Updates</p>`
+                  h28.insertAdjacentHTML("afterbegin",html28);
+
+                    
+                  // const h29 = document.querySelector('.step__sections .section:first-child .content-box:first-child');
+                  // let html29 = `<hr class="checkout-payment-hr" />`;
+                  // h29.insertAdjacentHTML("afterbegin",html29);
+                  // h29.insertAdjacentHTML("afterend",html29);
+                  }
+                } else {
+                  continue;
+                }
+              };
+            } else {
+              console.log("no");
+              setTimeout(pollFortestPDP27, 25);
+            }
+          };
+          pollFortestPDP27();
+        }
+      };
+
+      paymentUpdate();
+
+// $('.section--payment-method .section__content fieldset.content-box div#payment-gateway-subfields-6829408349 div.fieldset div.field--required .field__input-wrapper .field__input--iframe-container iframe').contents().find("body");
+
+      </script>
+
+       <style>
+        
+        // checkout billing address
+        
+       div#section--billing-address__different {
+         border: 2px solid #CBD6DB;
+       }
+        form.edit_checkout .section--billing-address > div.section__content > fieldset.content-box > div#section--billing-address__different {
+          border-top: 0 !important;
+          border-bottom-left-radius: 12px !important;
+          border-bottom-right-radius: 12px !important;
+          border: 2px solid #CBD6DB;
+        }
+        
+     
+        // checkout billing address
+        
+        .step__footer button#continue_button {
+          width: 37rem !important;
+        }
+        header.main__header .logo__image {
+          margin-left: -26px;
+        }
+        .radio-wrapper.content-box__row.selected-billing-address {
+          border: 2px solid #CBD6DB;
+        }
+        .radio-wrapper.content-box__row.selected-billing-address.different-billing-address {
+          border-bottom-left-radius: 0 !important;
+          border-bottom-right-radius: 0 !important;
+          border-bottom: 0;
+        }
+        .section--billing-address__different {
+          border-top: none !important;
+          border-bottom-left-radius: 12px;
+          border-bottom-right-radius: 12px;
+          border: 2px solid #CBD6DB;
+        }
+
+        .input-placeholder-color--lvl-22 {
+          color: red;
+        }
+        .selected-payment-method {
+          background-color: #ececec;
+        }
+
+        .wrap {
+          max-width: 90em;
+        }
+        .content {
+          background: white;
+        }
+        .order-summary__section__content .product-thumbnail__quantity {
+          display: none;
+        }
+        .order-summary__section__content .order-summary__emphasis {
+          color: #000000;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 1.6em;
+          text-transform: uppercase;
+        }
+        .order-summary__section__content .order-summary__small-text {
+          color: #000000;
+          margin-top: 30px;
+          font-size: 16px;
+          font-weight: 500;
+          margin-bottom: 15px;
+        }
+        .order-summary__section__content .order-qty {
+          color: #000000;
+          font-size: 16px;
+          font-weight: 500;
+          display: block;
+          margin-bottom: 50px;
+        }
+        .order-summary__section__content tr.product {
+          border-top: 1px solid #DDDDDD;
+        }
+        .order-summary__section__content .product__description {
+          padding-top: 30px;
+        }
+        .order-summary__section__content .product-thumbnail {
+          width: 10.6em;
+          height: 10.6em;
+        }
+        .product-thumbnail::after {
+          border: 0;
+        }
+        .order-summary__section__content .product__price .order-summary__emphasis {
+          color: #000;
+          font-weight: 500;
+          font-size: 16px;
+          margin-bottom: 42px;
+          display: block;
+        }
+        .order-summary__section__content .product__price {
+          vertical-align: bottom;
+        }
+
+        .order-summary-toggle__text--show svg {
+          transform: rotate(180deg);
+        }
+        .order-summary-toggle__text--hide svg{
+           transform: rotate(180deg);
+        }
+        .step__footer__previous-link svg{
+          display: none;
+        }
+        .section--shipping-method .section__content > fieldset.content-box:first-child{
+          border-color: #d9d9d9 !important;
+        }
+        .section__content > fieldset.content-box:first-child div[data-same-billing-address]{
+          margin-bottom: 15px;
+          border-radius: 12px;
+        }
+        .section__content > fieldset.content-box:first-child div[data-different-billing-address]{
+          border-radius: 12px;
+        }
+
+        .section--billing-address .section__content > fieldset.content-box:first-child{
+          border:none;
+        }
+
+        .field.field--required.field--show-floating-label.field--active iframe, .field.field--required.field--show-floating-label iframe {
+          position:relative;
+          top: -16px;
+        }
+
+        .payment-due-label__taxes {
+          display: none;
+        }
+
+        .policy-list__item{
+          text-align:left;
+        }
+
+        .review-block__inner{
+          flex-direction: column;
+          row-gap: 3px;
+        }
+        .review-block__label{
+          -webkit-flex: none;
+          font-size: 12px;
+        }
+
+        .check_area .logo__image--large{
+             max-height: 6.714286em;
+        }
+        
+        .step__footer .shown-if-js > p{
+          display: none;
+        }
+/* 
+        .step__footer button#continue_button {
+          width: ;
+        } */
+        .step__footer__previous-link {
+          position: absolute;
+          right: 37%;
+          top: 131%;
+          margin-right: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          right: auto;
+          white-space: nowrap;
+        }
+        .input-checkbox,
+        .input-radio {
+          width: 28px;
+          height: 28px;
+        }
+
+        .section--billing-address > div.section__content > fieldset.content-box > div {
+          background: #f5f5f5;
+        }
+
+        .superbump-app {
+          padding: 30px;
+        }
+        .superbump-price {
+          margin-right: 29px;
+          margin-bottom: 14px;
+        }
+        .superbump-title-container p {
+          margin-top: 17px;
+          padding-left: 5%;
+          padding-right: 5%;
+        }
+      }
+      a.superbump-action {
+        border: 1px solid #877f7f !important;
+        align-self: center !important;
+      }
+      .superbump-container {
+        align-items: flex-start !important;
+        min-height: 154px !important;
+        position: relative;
+      }
+      .superbump-action-container {
+        position: absolute !important;
+        top: 50%;
+        left: 14%;
+
+      }
+      .superbump-title-container p {
+        text-transform: uppercase;
+      }
+      .superbump-subtitle {
+        display: none !important;
+      }
+
+      .section--reductions .section__content .edit_checkout .field__input-btn {
+        background: #000000 !important;
+      }
+
+      .custom-gift-card p,
+      .payment-text-container p {
+        white-space: nowrap;
+         padding-left: 12px;
+          padding-right: 12px;
+      }
+
+      .order-summary__section .table.total-line-table .total-line-table__tbody .total-line--shipping .total-line__name > a {
+        display: none;
+      }
+      .content-box .field__icon .icon-svg--color-adaptive-lighter,
+      .content-box .field__caret .icon-svg--color-adaptive-lighter {
+        color: #000000;
+      }
+      .section--payment-method .field__icon {
+        top: -38px;
+      }
+      .transaction-text-container {
+        margin-bottom: 20px;
+      }
+    }
+    .section--billing-address > div > fieldset.content-box > div.radio-wrapper {
+      background: #ebebeb;
+    }
+    .section--remember-me .section__header .section__title {
+      display: none;
+    }
+    .section--remember-me .section__content .content-box {
+      border-color: white;
+    }
+    input#number::placeholder {
+      opacity: 0;
+    }
+    span.step__footer__previous-link-content {
+      color: #78a7a7;
+      font-weight: 500;
+      font-size: 15px;
+      text-transform: uppercase;
+      text-decoration: underline;
+    }
+
+    input#checkout_shipping_address_first_name::placeholder,
+    input#checkout_shipping_address_last_name::placeholder,
+    input#checkout_shipping_address_address1::placeholder,
+    input#checkout_shipping_address_address2::placeholder,
+    input#checkout_shipping_address_city::placeholder,
+    input#checkout_shipping_address_zip::placeholder,
+    input#checkout_shipping_address_phone::placeholder,
+    input#checkout_email::placeholder,
+    input#checkout_reduction_code::placeholder {
+      opacity: 0;
+    }
+
+    .total-line--shipping > td.total-line__price > span.order-summary__emphasis {
+      text-transform: uppercase;
+    }
+    .section.section--billing-address .section__header .section__title {
+      display: none;
+    }
+    .section.section--payment-method .section__header,
+    .section__text {
+      display: none;
+    }
+    .section.section--payment-method > div.section__content fieldset.content-box > div[data-gateway-name="credit_card"] > div.radio__input > input {
+      margin-top: 15px;
+    }
+
+    .radio__label.payment-method-wrapper > div.radio__label__accessory {
+      display: block;
+      margin-right: 181px;
+      text-align: left;
+      padding-left: 0;
+      margin-top: 11px;
+    }
+    .payment-text-container {
+      display: flex;
+    }
+    .payment-text-container hr {
+      width: 17rem;
+/*       border-top: 1px solid #e3dede; */
+      height: 1px;
+    background-color: #ececec;
+    border: none;
+    }
+        .payment-text-container p{
+          font-weight: 700;
+        }
+    .transaction-text-container p {
+      text-align: center;
+      padding-top: 10px;
+    }
+    .custom-gift-card {
+      display: flex;
+      margin-bottom: 15px;
+    }
+    .custom-gift-card hr {
+      width: 8rem;
+/*       border-top: 1px solid #e8e2e2; */
+          margin-top: 9px;
+          background-color: #e2e2e2;
+          border: none;
+          height: 1px;
+    }
+    .custom-gift-card p {
+      font-weight: 500;
+    }
+    .step__footer {
+      margin-bottom: 1em;
+    }
+
+    .breadcrumb__chevron-icon {
+      display: none;
+    }
+    .breadcrump-separator {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .product__description span.order-summary__small-text{
+      word-spacing: 15px;
+    }
+    .product__description span.order-qty{
+      word-spacing: 15px;
+    }
+    .superbump-title{
+      color: #938d8d;
+    }
+    .main .field__caret{
+      border-left: none;
+    }
+    @media only screen and (max-width:514px) {
+      .superbump-container{
+        min-height: 180px !important;
+      }
+      .superbump-compare-at-price{
+        margin-right: 10px;
+      }
+       .banner .wrap .logo--left > img{
+          max-height: 5.571429em;
+      }
+      .superbump-action{
+        margin-left: 0px !important;
+      }
+      .superbump-title-container p{
+        margin-top: 3px;
+      }
+      .logo--left{
+        text-align: center;
+        display: block;
+      }
+      .radio__label.payment-method-wrapper > div.radio__label__accessory{
+        margin-right:0;
+      }
+      #payment-gateway-subfields-6829408349 {
+/*         width: 75%; */
+          width: 100%;
+      }
+      .order-summary__section__content .order-summary__emphasis {
+        font-size: 12px;
+      }
+      .order-summary__section .edit_checkout .btn__content {
+        position: unset;
+      }
+      svg.icon-svg.icon-svg--size-16.btn__icon.shown-on-mobile {
+        display: none;
+      }
+      .superbump-action-container {
+        top: 75%;
+        left: 0;
+      }
+      .superbump-app {
+        padding: 17px;
+        padding: 17px 17px 20px 17px
+      }
+
+      .step__footer__previous-link {
+/*         right: 28%; */
+        top: 71%;
+
+      }
+    }
+
+    .field__caret svg:not(.new-down-icon){
+      display: none;
+    }
+    .new-down-icon{
+      margin: 4px 0 0 8px;
+    }
+    .order-summary-toggle__inner span.order-summary-toggle__icon-wrapper{
+        display: none;
+    }
+
+    .new-bag-icon{
+      margin-right: 5px;
+    }
+    .bottom-line-total{
+      width: 34em;
+      border-top: 1px solid #f2f2f2;
+    }
+     #checkout_remember_me:checked {
+        border-color: #000000;
+        border-width: 14px;
+     }
+       #checkout_buyer_accepts_marketing:checked {
+          border-color: #000000;
+          border-width: 14px;
+        }
+        #checkout_buyer_accepts_sms:checked {
+          border-color: #000000;
+          border-width: 14px;
+         }
+        .section--remember-me .content-box__row:first-child{
+          padding-left: 0px !important; 
+        }
+        div[data-step="payment_method"] .review-block__link, div[data-step="shipping_method"] .review-block__link{
+          margin-top: 7px;
+          padding-right: 15px;
+        }
+        .checkout-payment-hr{
+          height: 2px;
+          background-color: #f8f8f8;
+          border: none;
+          width: 100%;
+        }
+        .billing-country-custom{
+          padding-left: 7px;
+        }
+        .step__footer {
+          width: 100%;
+        }
+        .shown-if-js{
+          width: 100%;
+        }
+     .step__footer button#continue_button {
+        width: 100%;
+      }
+        div[data-step="payment_method"] .step__sections .section:first-child .content-box .content-box__row,  div[data-step="shipping_method"] .step__sections .section:first-child .content-box .content-box__row{
+          padding-left: 0px;
+          padding-right: 0px;
+          border-top: 1px solid #ececec;
+          border-bottom: 1px solid #ececec;
+          border-bottom-left-radius: 0px;
+          border-bottom-right-radius: 0px;
+        }
+        div[data-step="payment_method"] .review-block__inner, div[data-step="shipping_method"] .review-block__inner{
+          padding-left: 15px;
+        }
+        .order-summary__section.order-summary__section--total-lines{
+          border-bottom: 1px solid #ECECEC;
+        }
+       .order-summary__section--total-lines tbody.total-line-table__tbody:first-child .total-line__name{
+          padding-bottom: 1.5em;
+        }
+        .order-summary__sections .total-line--subtotal .order-summary__emphasis{
+          padding-bottom: 1.5em;
+        }
+        .order-summary__section .total-line-table .payment-due-label__total{
+          font-size: 14px
+        }
+       .custom-btn-add span.visually-hidden-on-mobile{
+        display: none;
+      }
+        div[data-step="payment_method"] .step__sections .review-block:nth-child(3) .review-block__link{
+          display: none;
+        }
+        .order-summary__section--discount{
+          border-top: none !important;
+        }
+
+        #checkout_reduction_code_mobile{
+              padding-bottom: 11px;
+        }
+
+
+       @media (min-width: 750px){
+        .sms-marketing-fieldset {
+            padding-left: 2.75em !important;
+        }
+      }
+
+
+      @media screen and (min-width: 514px) and (max-width:767px) {
+        .superbump-action{
+          width: 120px;
+          margin-top:35px;
+        }
+      }
+
+     @media screen and (min-width: 767px) and (max-width:767px) {
+        .superbump-price-mobile_none {
+           display: block;
+        } 
+       
+     }
+
+     @media screen and (min-width: 1000px) and (max-width:1100px) {
+        .superbump-action-container {
+            position: absolute !important;
+            top: 65%;           
+        }      
+     }
+     @media screen and (min-width: 768px) and (max-width:999px) {
+        .superbump-action-container {
+            left: 90px;           
+        }      
+     }
+
+    @media screen and (min-width: 515px) and (max-width:767px) {
+        .superbump-compare-at-price{
+            margin-right: 10px;
+        }     
+     }
+   
+      @media screen and (min-width: 515px) and (max-width:715px) {
+        .superbump-action{
+          margin-top:60px;
+        }
+      }
+     @media (514px >= width >= 514px) {
+	        .superbump-action{
+	             margin-left: 100px !important;
+	             margin-top: 0px !important;
+	        }
+	
+	 }
+
+      </style>
+
